@@ -47,15 +47,16 @@
     view.backgroundColor = [UIColor clearColor];
     [self.tableView setTableFooterView:view];
 }
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fuck"];
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"fuck"];
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
