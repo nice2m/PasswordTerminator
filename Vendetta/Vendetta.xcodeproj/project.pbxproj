@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */; };
+		2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258E8701B7B87CD0009CC41 /* MyTableViewController.m */; };
+		22BD26871B7A3E6200FA3337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26861B7A3E6200FA3337 /* main.m */; };
+		22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26891B7A3E6200FA3337 /* AppDelegate.m */; };
+		22BD26931B7A3E6200FA3337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BD26911B7A3E6200FA3337 /* Main.storyboard */; };
+		22BD26951B7A3E6200FA3337 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22BD26941B7A3E6200FA3337 /* Images.xcassets */; };
+		22BD26981B7A3E6200FA3337 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BD26961B7A3E6200FA3337 /* LaunchScreen.xib */; };
+		22BD26A41B7A3E6200FA3337 /* VendettaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26A31B7A3E6200FA3337 /* VendettaTests.m */; };
+		22BD26B51B7B780100FA3337 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26B41B7B780100FA3337 /* TabViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22BD269E1B7A3E6200FA3337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22BD26791B7A3E6200FA3337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22BD26801B7A3E6200FA3337;
+			remoteInfo = Vendetta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2258E86C1B7B87C10009CC41 /* PassboxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassboxTableViewController.h; sourceTree = "<group>"; };
+		2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassboxTableViewController.m; sourceTree = "<group>"; };
+		2258E86F1B7B87CD0009CC41 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		2258E8701B7B87CD0009CC41 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		22BD26811B7A3E6200FA3337 /* Vendetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vendetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22BD26851B7A3E6200FA3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22BD26861B7A3E6200FA3337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22BD26881B7A3E6200FA3337 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22BD26891B7A3E6200FA3337 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22BD26921B7A3E6200FA3337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22BD26941B7A3E6200FA3337 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		22BD26971B7A3E6200FA3337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		22BD269D1B7A3E6200FA3337 /* VendettaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VendettaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22BD26A21B7A3E6200FA3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22BD26A31B7A3E6200FA3337 /* VendettaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendettaTests.m; sourceTree = "<group>"; };
+		22BD26B31B7B780100FA3337 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		22BD26B41B7B780100FA3337 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22BD267E1B7A3E6200FA3337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22BD269A1B7A3E6200FA3337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22BD26781B7A3E6200FA3337 = {
+			isa = PBXGroup;
+			children = (
+				22BD26831B7A3E6200FA3337 /* Vendetta */,
+				22BD26A01B7A3E6200FA3337 /* VendettaTests */,
+				22BD26821B7A3E6200FA3337 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22BD26821B7A3E6200FA3337 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22BD26811B7A3E6200FA3337 /* Vendetta.app */,
+				22BD269D1B7A3E6200FA3337 /* VendettaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22BD26831B7A3E6200FA3337 /* Vendetta */ = {
+			isa = PBXGroup;
+			children = (
+				22BD26881B7A3E6200FA3337 /* AppDelegate.h */,
+				22BD26891B7A3E6200FA3337 /* AppDelegate.m */,
+				22BD26911B7A3E6200FA3337 /* Main.storyboard */,
+				22BD26941B7A3E6200FA3337 /* Images.xcassets */,
+				22BD26961B7A3E6200FA3337 /* LaunchScreen.xib */,
+				22BD26841B7A3E6200FA3337 /* Supporting Files */,
+				22BD26B31B7B780100FA3337 /* TabViewController.h */,
+				22BD26B41B7B780100FA3337 /* TabViewController.m */,
+				2258E86C1B7B87C10009CC41 /* PassboxTableViewController.h */,
+				2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */,
+				2258E86F1B7B87CD0009CC41 /* MyTableViewController.h */,
+				2258E8701B7B87CD0009CC41 /* MyTableViewController.m */,
+			);
+			path = Vendetta;
+			sourceTree = "<group>";
+		};
+		22BD26841B7A3E6200FA3337 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22BD26851B7A3E6200FA3337 /* Info.plist */,
+				22BD26861B7A3E6200FA3337 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22BD26A01B7A3E6200FA3337 /* VendettaTests */ = {
+			isa = PBXGroup;
+			children = (
+				22BD26A31B7A3E6200FA3337 /* VendettaTests.m */,
+				22BD26A11B7A3E6200FA3337 /* Supporting Files */,
+			);
+			path = VendettaTests;
+			sourceTree = "<group>";
+		};
+		22BD26A11B7A3E6200FA3337 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22BD26A21B7A3E6200FA3337 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22BD26801B7A3E6200FA3337 /* Vendetta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22BD26A71B7A3E6200FA3337 /* Build configuration list for PBXNativeTarget "Vendetta" */;
+			buildPhases = (
+				22BD267D1B7A3E6200FA3337 /* Sources */,
+				22BD267E1B7A3E6200FA3337 /* Frameworks */,
+				22BD267F1B7A3E6200FA3337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vendetta;
+			productName = Vendetta;
+			productReference = 22BD26811B7A3E6200FA3337 /* Vendetta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22BD269C1B7A3E6200FA3337 /* VendettaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22BD26AA1B7A3E6200FA3337 /* Build configuration list for PBXNativeTarget "VendettaTests" */;
+			buildPhases = (
+				22BD26991B7A3E6200FA3337 /* Sources */,
+				22BD269A1B7A3E6200FA3337 /* Frameworks */,
+				22BD269B1B7A3E6200FA3337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22BD269F1B7A3E6200FA3337 /* PBXTargetDependency */,
+			);
+			name = VendettaTests;
+			productName = VendettaTests;
+			productReference = 22BD269D1B7A3E6200FA3337 /* VendettaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22BD26791B7A3E6200FA3337 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "chen Yuheng";
+				TargetAttributes = {
+					22BD26801B7A3E6200FA3337 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					22BD269C1B7A3E6200FA3337 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 22BD26801B7A3E6200FA3337;
+					};
+				};
+			};
+			buildConfigurationList = 22BD267C1B7A3E6200FA3337 /* Build configuration list for PBXProject "Vendetta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22BD26781B7A3E6200FA3337;
+			productRefGroup = 22BD26821B7A3E6200FA3337 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22BD26801B7A3E6200FA3337 /* Vendetta */,
+				22BD269C1B7A3E6200FA3337 /* VendettaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22BD267F1B7A3E6200FA3337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BD26931B7A3E6200FA3337 /* Main.storyboard in Resources */,
+				22BD26981B7A3E6200FA3337 /* LaunchScreen.xib in Resources */,
+				22BD26951B7A3E6200FA3337 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22BD269B1B7A3E6200FA3337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22BD267D1B7A3E6200FA3337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */,
+				2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */,
+				22BD26871B7A3E6200FA3337 /* main.m in Sources */,
+				2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */,
+				22BD26B51B7B780100FA3337 /* TabViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22BD26991B7A3E6200FA3337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BD26A41B7A3E6200FA3337 /* VendettaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22BD269F1B7A3E6200FA3337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22BD26801B7A3E6200FA3337 /* Vendetta */;
+			targetProxy = 22BD269E1B7A3E6200FA3337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22BD26911B7A3E6200FA3337 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22BD26921B7A3E6200FA3337 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22BD26961B7A3E6200FA3337 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22BD26971B7A3E6200FA3337 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22BD26A51B7A3E6200FA3337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22BD26A61B7A3E6200FA3337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22BD26A81B7A3E6200FA3337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Vendetta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22BD26A91B7A3E6200FA3337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Vendetta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		22BD26AB1B7A3E6200FA3337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VendettaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vendetta.app/Vendetta";
+			};
+			name = Debug;
+		};
+		22BD26AC1B7A3E6200FA3337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VendettaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vendetta.app/Vendetta";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22BD267C1B7A3E6200FA3337 /* Build configuration list for PBXProject "Vendetta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BD26A51B7A3E6200FA3337 /* Debug */,
+				22BD26A61B7A3E6200FA3337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22BD26A71B7A3E6200FA3337 /* Build configuration list for PBXNativeTarget "Vendetta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BD26A81B7A3E6200FA3337 /* Debug */,
+				22BD26A91B7A3E6200FA3337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22BD26AA1B7A3E6200FA3337 /* Build configuration list for PBXNativeTarget "VendettaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BD26AB1B7A3E6200FA3337 /* Debug */,
+				22BD26AC1B7A3E6200FA3337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22BD26791B7A3E6200FA3337 /* Project object */;
+}
