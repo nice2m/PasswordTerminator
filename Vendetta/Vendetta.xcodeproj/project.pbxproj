@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */; };
 		2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258E8701B7B87CD0009CC41 /* MyTableViewController.m */; };
+		229117E01B7CDA8B0078A55C /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117DF1B7CDA8B0078A55C /* UINavigationBar+Awesome.m */; };
 		22BD26871B7A3E6200FA3337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26861B7A3E6200FA3337 /* main.m */; };
 		22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26891B7A3E6200FA3337 /* AppDelegate.m */; };
 		22BD26931B7A3E6200FA3337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BD26911B7A3E6200FA3337 /* Main.storyboard */; };
@@ -33,6 +34,8 @@
 		2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassboxTableViewController.m; sourceTree = "<group>"; };
 		2258E86F1B7B87CD0009CC41 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
 		2258E8701B7B87CD0009CC41 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		229117DE1B7CDA8B0078A55C /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		229117DF1B7CDA8B0078A55C /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		22BD26811B7A3E6200FA3337 /* Vendetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vendetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BD26851B7A3E6200FA3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22BD26861B7A3E6200FA3337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		229117DD1B7CDA660078A55C /* All Third */ = {
+			isa = PBXGroup;
+			children = (
+				229117DE1B7CDA8B0078A55C /* UINavigationBar+Awesome.h */,
+				229117DF1B7CDA8B0078A55C /* UINavigationBar+Awesome.m */,
+			);
+			name = "All Third";
+			sourceTree = "<group>";
+		};
 		22BD26781B7A3E6200FA3337 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +99,7 @@
 		22BD26831B7A3E6200FA3337 /* Vendetta */ = {
 			isa = PBXGroup;
 			children = (
+				229117DD1B7CDA660078A55C /* All Third */,
 				22BD26881B7A3E6200FA3337 /* AppDelegate.h */,
 				22BD26891B7A3E6200FA3337 /* AppDelegate.m */,
 				22BD26911B7A3E6200FA3337 /* Main.storyboard */,
@@ -230,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */,
+				229117E01B7CDA8B0078A55C /* UINavigationBar+Awesome.m in Sources */,
 				2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */,
 				22BD26871B7A3E6200FA3337 /* main.m in Sources */,
 				2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */,

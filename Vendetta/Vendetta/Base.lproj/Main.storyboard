@@ -18,13 +18,30 @@
                         <color key="selectedImageTintColor" red="0.23529411759999999" green="0.70196078429999997" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="VZ7-Kf-wcF" kind="relationship" relationship="viewControllers" id="uln-Uj-sub"/>
-                        <segue destination="PDe-7b-kkI" kind="relationship" relationship="viewControllers" id="m3p-IE-KlU"/>
+                        <segue destination="Yrg-35-ZdH" kind="relationship" relationship="viewControllers" id="s8H-pZ-pdc"/>
+                        <segue destination="T6F-WC-yFZ" kind="relationship" relationship="viewControllers" id="0FU-15-N7Y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-473" y="0.0"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="xEO-KC-dH9">
+            <objects>
+                <navigationController id="T6F-WC-yFZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="second" id="UQg-nN-ihb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1jO-2p-Qq2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PDe-7b-kkI" kind="relationship" relationship="rootViewController" id="ANm-SK-5Cq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBu-sg-FF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="414"/>
         </scene>
         <!--我-->
         <scene sceneID="esR-cH-hus">
@@ -48,10 +65,43 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="我" image="second" id="DSh-DD-DdU"/>
+                    <navigationItem key="navigationItem" id="bx5-dG-eki">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="bDV-vs-2El">
+                            <rect key="frame" x="76" y="6" width="168" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOm-W8-JN7">
+                                    <rect key="frame" x="20" y="6" width="128" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJQ-mU-e6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="334"/>
+            <point key="canvasLocation" x="676" y="414"/>
+        </scene>
+        <!--密码箱-->
+        <scene sceneID="3UL-9t-i35">
+            <objects>
+                <navigationController id="Yrg-35-ZdH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="密码箱" image="first" id="S8H-AL-JTK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jMo-Fj-YTK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VZ7-Kf-wcF" kind="relationship" relationship="rootViewController" id="wcC-Hh-wx9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6W9-37-wqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="-296"/>
         </scene>
         <!--密码箱-->
         <scene sceneID="37X-ve-l3z">
@@ -75,10 +125,26 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="密码箱" image="first" id="L6G-lO-OBp"/>
+                    <navigationItem key="navigationItem" id="YT1-ur-nJ3">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="JNv-Nc-Jq8">
+                            <rect key="frame" x="81" y="6" width="158" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密码箱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luc-gq-NP5">
+                                    <rect key="frame" x="15" y="6" width="128" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2Z-dY-3fH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="-303"/>
+            <point key="canvasLocation" x="676" y="-296"/>
         </scene>
     </scenes>
     <resources>
