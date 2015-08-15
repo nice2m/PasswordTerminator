@@ -79,6 +79,33 @@
 			name = "All Third";
 			sourceTree = "<group>";
 		};
+		229117E31B7ED6FC0078A55C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		229117E41B7ED7090078A55C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22BD26B31B7B780100FA3337 /* TabViewController.h */,
+				22BD26B41B7B780100FA3337 /* TabViewController.m */,
+				2258E86C1B7B87C10009CC41 /* PassboxTableViewController.h */,
+				2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */,
+				2258E86F1B7B87CD0009CC41 /* MyTableViewController.h */,
+				2258E8701B7B87CD0009CC41 /* MyTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		229117E51B7ED99D0078A55C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		22BD26781B7A3E6200FA3337 = {
 			isa = PBXGroup;
 			children = (
@@ -100,19 +127,11 @@
 		22BD26831B7A3E6200FA3337 /* Vendetta */ = {
 			isa = PBXGroup;
 			children = (
+				229117E51B7ED99D0078A55C /* Model */,
+				229117E41B7ED7090078A55C /* Controller */,
+				229117E31B7ED6FC0078A55C /* View */,
 				229117DD1B7CDA660078A55C /* All Third */,
-				22BD26881B7A3E6200FA3337 /* AppDelegate.h */,
-				22BD26891B7A3E6200FA3337 /* AppDelegate.m */,
-				22BD26911B7A3E6200FA3337 /* Main.storyboard */,
-				22BD26941B7A3E6200FA3337 /* Images.xcassets */,
-				22BD26961B7A3E6200FA3337 /* LaunchScreen.xib */,
 				22BD26841B7A3E6200FA3337 /* Supporting Files */,
-				22BD26B31B7B780100FA3337 /* TabViewController.h */,
-				22BD26B41B7B780100FA3337 /* TabViewController.m */,
-				2258E86C1B7B87C10009CC41 /* PassboxTableViewController.h */,
-				2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */,
-				2258E86F1B7B87CD0009CC41 /* MyTableViewController.h */,
-				2258E8701B7B87CD0009CC41 /* MyTableViewController.m */,
 			);
 			path = Vendetta;
 			sourceTree = "<group>";
@@ -120,6 +139,11 @@
 		22BD26841B7A3E6200FA3337 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22BD26881B7A3E6200FA3337 /* AppDelegate.h */,
+				22BD26891B7A3E6200FA3337 /* AppDelegate.m */,
+				22BD26911B7A3E6200FA3337 /* Main.storyboard */,
+				22BD26941B7A3E6200FA3337 /* Images.xcassets */,
+				22BD26961B7A3E6200FA3337 /* LaunchScreen.xib */,
 				22BD26851B7A3E6200FA3337 /* Info.plist */,
 				22BD26861B7A3E6200FA3337 /* main.m */,
 				229117E21B7CE0A10078A55C /* GlobalHeader.h */,

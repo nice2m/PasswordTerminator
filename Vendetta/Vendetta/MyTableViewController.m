@@ -40,12 +40,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;
+    switch (section) {
+        case 0:
+            return 1;
+            break;
+        case 1:
+            return 5;
+            break;
+        default:
+            return 0;
+            break;
+    }
 }
 
 - (void) hideExtraCellLine
@@ -56,12 +66,34 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fuck"];
-    if(!cell)
-    {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"fuck"];
+    
+    switch (indexPath.section) {
+        case 0:
+        {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"firstSectionCell"];
+            if(!cell)
+            {
+                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"firstSectionCell"];
+            }
+            return cell;
+        }
+            break;
+        case 1:
+        {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fuck"];
+            if(!cell)
+            {
+                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"fuck"];
+            }
+            return cell;
+        }
+            break;
+        default:
+        {
+            return nil;
+        }
+            break;
     }
-    return cell;
 }
 
 
