@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GlobalHeader.h"
+ 
 @interface MyNextPasswordTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIView *customBackgroundView;

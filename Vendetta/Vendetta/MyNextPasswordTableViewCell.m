@@ -15,26 +15,35 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self)
     {
+        self.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        
         self.customBackgroundView = [[UIView alloc]initWithFrame:CGRectZero];
         _customBackgroundView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_customBackgroundView];
         
         self.timeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-        _timeLabel.font = [UIFont systemFontOfSize:12.0f];
+        _timeLabel.font = [UIFont systemFontOfSize:MyNextPasswordTimeLabelFont];
         _timeLabel.textColor = [UIColor lightTextColor];
         [_customBackgroundView addSubview:_timeLabel];
         
         self.serialCodeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-        _serialCodeLabel.font = [UIFont systemFontOfSize:20.0f];
+        _serialCodeLabel.font = [UIFont systemFontOfSize:MyNextPasswordCodeLabelFont];
         _serialCodeLabel.textColor = [UIColor blackColor];
         [_customBackgroundView addSubview:_serialCodeLabel];
         
         self.codeTitleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-        _codeTitleLabel.font = [UIFont systemFontOfSize:16.0f];
+        _codeTitleLabel.font = [UIFont systemFontOfSize:MyNextPasswordTitleLabelFont];
         _codeTitleLabel.textColor = [UIColor lightTextColor];
         [_customBackgroundView addSubview:_codeTitleLabel];
     }
     return self;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    _customBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, self.height - 20.0f);
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

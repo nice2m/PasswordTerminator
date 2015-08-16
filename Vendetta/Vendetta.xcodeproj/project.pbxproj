@@ -12,6 +12,7 @@
 		229117E01B7CDA8B0078A55C /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117DF1B7CDA8B0078A55C /* UINavigationBar+Awesome.m */; };
 		229117E81B802CA70078A55C /* MyNextPasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117E71B802CA70078A55C /* MyNextPasswordTableViewCell.m */; };
 		229117EB1B802D010078A55C /* PassboxItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117EA1B802D010078A55C /* PassboxItemTableViewCell.m */; };
+		229117EE1B80D2E00078A55C /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117ED1B80D2E00078A55C /* UIViewExt.m */; };
 		22BD26871B7A3E6200FA3337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26861B7A3E6200FA3337 /* main.m */; };
 		22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26891B7A3E6200FA3337 /* AppDelegate.m */; };
 		22BD26931B7A3E6200FA3337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BD26911B7A3E6200FA3337 /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 		229117E71B802CA70078A55C /* MyNextPasswordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNextPasswordTableViewCell.m; sourceTree = "<group>"; };
 		229117E91B802D010078A55C /* PassboxItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassboxItemTableViewCell.h; sourceTree = "<group>"; };
 		229117EA1B802D010078A55C /* PassboxItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassboxItemTableViewCell.m; sourceTree = "<group>"; };
+		229117EC1B80D2E00078A55C /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		229117ED1B80D2E00078A55C /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		22BD26811B7A3E6200FA3337 /* Vendetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vendetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BD26851B7A3E6200FA3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22BD26861B7A3E6200FA3337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 		229117DD1B7CDA660078A55C /* All Third */ = {
 			isa = PBXGroup;
 			children = (
+				229117EC1B80D2E00078A55C /* UIViewExt.h */,
+				229117ED1B80D2E00078A55C /* UIViewExt.m */,
 				229117DE1B7CDA8B0078A55C /* UINavigationBar+Awesome.h */,
 				229117DF1B7CDA8B0078A55C /* UINavigationBar+Awesome.m */,
 			);
@@ -282,6 +287,7 @@
 				229117E01B7CDA8B0078A55C /* UINavigationBar+Awesome.m in Sources */,
 				2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */,
 				22BD26871B7A3E6200FA3337 /* main.m in Sources */,
+				229117EE1B80D2E00078A55C /* UIViewExt.m in Sources */,
 				2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */,
 				22BD26B51B7B780100FA3337 /* TabViewController.m in Sources */,
 				229117E81B802CA70078A55C /* MyNextPasswordTableViewCell.m in Sources */,

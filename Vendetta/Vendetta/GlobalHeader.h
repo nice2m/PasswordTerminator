@@ -9,5 +9,16 @@
 #ifndef Vendetta_GlobalHeader_h
 #define Vendetta_GlobalHeader_h
 
-#define GlobalGray [UIColor lightGrayColor]
+#import "UIViewExt.h"
+
+#define GlobalGray                          [UIColor lightGrayColor]
+
+#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+
+#pragma mark - MyTableViewFont
+#define MyNextPasswordTimeLabelFont         12.0f
+#define MyNextPasswordCodeLabelFont         20.0f
+#define MyNextPasswordTitleLabelFont        16.0f
+
 #endif

@@ -8,6 +8,7 @@
 
 #import "MyTableViewController.h"
 #import "UINavigationBar+Awesome.h"
+#import "MyNextPasswordTableViewCell.h"
 
 @interface MyTableViewController ()
 
@@ -19,6 +20,7 @@
     [super viewDidLoad];
     [self hideExtraCellLine];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -71,10 +73,10 @@
     switch (indexPath.section) {
         case 0:
         {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"firstSectionCell"];
+            MyNextPasswordTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"firstSectionCell"];
             if(!cell)
             {
-                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"firstSectionCell"];
+                cell = [[MyNextPasswordTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"firstSectionCell"];
             }
             return cell;
         }
