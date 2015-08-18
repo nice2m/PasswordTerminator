@@ -15,6 +15,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self)
     {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         
         self.customBackgroundView = [[UIView alloc]initWithFrame:CGRectZero];
@@ -23,7 +24,7 @@
         
         self.timeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         _timeLabel.font = [UIFont systemFontOfSize:MyNextPasswordTimeLabelFont];
-        _timeLabel.textColor = [UIColor lightTextColor];
+        _timeLabel.textColor = GlobalGray;
         [_customBackgroundView addSubview:_timeLabel];
         
         self.serialCodeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
@@ -33,7 +34,7 @@
         
         self.codeTitleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         _codeTitleLabel.font = [UIFont systemFontOfSize:MyNextPasswordTitleLabelFont];
-        _codeTitleLabel.textColor = [UIColor lightTextColor];
+        _codeTitleLabel.textColor = GlobalGray;
         [_customBackgroundView addSubview:_codeTitleLabel];
     }
     return self;
@@ -43,6 +44,11 @@
 {
     [super layoutSubviews];
     _customBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, self.height - 20.0f);
+    
+    CGFloat timeLabelWidth = [UIKitHelper getTextWidthWithText:@"30秒后刷新" andMaxHeight:MyNextPasswordTimeLabelFont andFont:[UIFont systemFontOfSize:MyNextPasswordTimeLabelFont]];
+    _timeLabel.frame = CGRectMake((ScreenWidth - timeLabelWidth)/2.0f, 10.0f, timeLabelWidth, MyNextPasswordTimeLabelFont);
+    _timeLabel.text = @"30秒后刷新";
+    
     
 }
 

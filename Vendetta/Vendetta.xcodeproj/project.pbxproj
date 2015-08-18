@@ -13,6 +13,8 @@
 		229117E81B802CA70078A55C /* MyNextPasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117E71B802CA70078A55C /* MyNextPasswordTableViewCell.m */; };
 		229117EB1B802D010078A55C /* PassboxItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117EA1B802D010078A55C /* PassboxItemTableViewCell.m */; };
 		229117EE1B80D2E00078A55C /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117ED1B80D2E00078A55C /* UIViewExt.m */; };
+		22A9FAA51B83754B00929CBB /* UIKit+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9FAA41B83754B00929CBB /* UIKit+Helper.m */; };
+		22A9FAA81B8376EC00929CBB /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9FAA71B8376EC00929CBB /* Encryption.m */; };
 		22BD26871B7A3E6200FA3337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26861B7A3E6200FA3337 /* main.m */; };
 		22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26891B7A3E6200FA3337 /* AppDelegate.m */; };
 		22BD26931B7A3E6200FA3337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BD26911B7A3E6200FA3337 /* Main.storyboard */; };
@@ -46,6 +48,10 @@
 		229117EA1B802D010078A55C /* PassboxItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassboxItemTableViewCell.m; sourceTree = "<group>"; };
 		229117EC1B80D2E00078A55C /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		229117ED1B80D2E00078A55C /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		22A9FAA31B83754B00929CBB /* UIKit+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+Helper.h"; sourceTree = "<group>"; };
+		22A9FAA41B83754B00929CBB /* UIKit+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIKit+Helper.m"; sourceTree = "<group>"; };
+		22A9FAA61B8376EC00929CBB /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
+		22A9FAA71B8376EC00929CBB /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
 		22BD26811B7A3E6200FA3337 /* Vendetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vendetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BD26851B7A3E6200FA3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22BD26861B7A3E6200FA3337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,10 +88,14 @@
 		229117DD1B7CDA660078A55C /* All Third */ = {
 			isa = PBXGroup;
 			children = (
+				22A9FAA61B8376EC00929CBB /* Encryption.h */,
+				22A9FAA71B8376EC00929CBB /* Encryption.m */,
 				229117EC1B80D2E00078A55C /* UIViewExt.h */,
 				229117ED1B80D2E00078A55C /* UIViewExt.m */,
 				229117DE1B7CDA8B0078A55C /* UINavigationBar+Awesome.h */,
 				229117DF1B7CDA8B0078A55C /* UINavigationBar+Awesome.m */,
+				22A9FAA31B83754B00929CBB /* UIKit+Helper.h */,
+				22A9FAA41B83754B00929CBB /* UIKit+Helper.m */,
 			);
 			name = "All Third";
 			sourceTree = "<group>";
@@ -291,6 +301,8 @@
 				2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */,
 				22BD26B51B7B780100FA3337 /* TabViewController.m in Sources */,
 				229117E81B802CA70078A55C /* MyNextPasswordTableViewCell.m in Sources */,
+				22A9FAA81B8376EC00929CBB /* Encryption.m in Sources */,
+				22A9FAA51B83754B00929CBB /* UIKit+Helper.m in Sources */,
 				229117EB1B802D010078A55C /* PassboxItemTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,7 @@
 #define Vendetta_GlobalHeader_h
 
 #import "UIViewExt.h"
+#import "UIKit+Helper.h"
 
 #define GlobalGray                          [UIColor lightGrayColor]
 
