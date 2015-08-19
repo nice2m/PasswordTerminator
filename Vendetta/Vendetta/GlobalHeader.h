@@ -19,7 +19,8 @@
 
 #pragma mark - MyTableViewFont
 #define MyNextPasswordTimeLabelFont         12.0f
-#define MyNextPasswordCodeLabelFont         20.0f
-#define MyNextPasswordTitleLabelFont        16.0f
+#define MyNextPasswordCodeLabelFont         30.0f
+#define MyNextPasswordTitleLabelFont        20.0f
 
+#define CELL_UPDATE_INTERVAL 30
 #endif

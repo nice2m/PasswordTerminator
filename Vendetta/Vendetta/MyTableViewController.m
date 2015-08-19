@@ -11,7 +11,10 @@
 #import "MyNextPasswordTableViewCell.h"
 
 @interface MyTableViewController ()
-
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic) NSInteger seconds;
+@property (nonatomic, strong) UILabel *timerLabel;
+@property (nonatomic, strong) UILabel *codeLabel;
 @end
 
 @implementation MyTableViewController
@@ -21,6 +24,9 @@
     [self hideExtraCellLine];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timeUpdate:) userInfo:nil repeats:YES];
+    self.seconds = CELL_UPDATE_INTERVAL;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -37,6 +43,24 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar lt_setBackgroundColor:GlobalGray];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [_timer fire];
+}
+
+- (void)timeUpdate:(id)sender
+{
+    if(self.seconds == 0)
+    {
+        self.seconds = CELL_UPDATE_INTERVAL;
+        self.timerLabel.text = [NSString stringWithFormat:@"%ld秒后刷新",self.seconds];
+        return;
+    }
+    self.seconds--;
+    self.timerLabel.text = [NSString stringWithFormat:@"%ld秒后刷新",self.seconds];
 }
 
 #pragma mark - Table view data source
@@ -77,6 +101,8 @@
             if(!cell)
             {
                 cell = [[MyNextPasswordTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"firstSectionCell"];
+                self.timerLabel = cell.timeLabel;
+                self.codeLabel = cell.serialCodeLabel;
             }
             return cell;
         }
