@@ -18,6 +18,11 @@
 @property (nonatomic) NSInteger seconds;
 @property (nonatomic, strong) UILabel *timerLabel;
 @property (nonatomic, strong) UILabel *codeLabel;
+
+@property (nonatomic) NSInteger passwordLength;
+@property (nonatomic) BOOL hasUpperCase;
+@property (nonatomic) BOOL hasSpecialCharac
+;
 @end
 
 @implementation MyTableViewController
@@ -27,8 +32,11 @@
     [self hideExtraCellLine];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    
+
+    self.passwordLength = 6;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timeUpdate:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
     self.seconds = 0;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -69,7 +77,7 @@
 {
     self.seconds = CELL_UPDATE_INTERVAL;
     self.timerLabel.text = [NSString stringWithFormat:@"%ld秒后刷新",self.seconds];
-    self.code = [PasswordFactory passwordWithLength:8 withUppercase:YES withSpecialCharacters:YES];
+    self.code = [PasswordFactory passwordWithLength:self.passwordLength withUppercase:self.hasUpperCase withSpecialCharacters:self.hasSpecialCharac];
     self.codeLabel.text = self.code;
 }
 
@@ -87,7 +95,7 @@
             return 1;
             break;
         case 1:
-            return 5;
+            return 6;
             break;
         default:
             return 0;
@@ -128,6 +136,40 @@
             if(!cell)
             {
                 cell = [[MyNextPasswordChoiceTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"secondSectionCell"];
+                switch (indexPath.row) {
+                    case 0:
+                    {
+                        cell.customChoiceTitleLabel.text = @"生成7位长度密码";
+                    }
+                        break;
+                    case 1:
+                    {
+                        cell.customChoiceTitleLabel.text = @"生成8位长度密码";
+                    }
+                        break;
+                    case 2:
+                    {
+                        cell.customChoiceTitleLabel.text = @"生成9位长度密码";
+                    }
+                        break;
+                    case 3:
+                    {
+                        cell.customChoiceTitleLabel.text = @"生成10位长度密码";
+                    }
+                        break;
+                    case 4:
+                    {
+                        cell.customChoiceTitleLabel.text = @"密码中带有大写英文字母";
+                    }
+                        break;
+                    case 5:
+                    {
+                        cell.customChoiceTitleLabel.text = @"密码中带有特殊符号";
+                    }
+                        break;
+                    default:
+                        break;
+                }
             }
             return cell;
         }
@@ -151,6 +193,79 @@
         return 60.0f;
     }
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 0)
+    {
+        return;
+    }
+    else
+    {
+        MyNextPasswordChoiceTableViewCell *cell = (MyNextPasswordChoiceTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+        switch (indexPath.row) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            {
+                if(self.passwordLength != indexPath.row + 7)
+                {
+                    if(self.passwordLength >= 7)
+                    {
+                        [(MyNextPasswordChoiceTableViewCell *)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:self.passwordLength - 7 inSection:1]] contentView].backgroundColor = [UIColor clearColor];
+                        [(MyNextPasswordChoiceTableViewCell *)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:self.passwordLength - 7 inSection:1]] selectedIconImageView].hidden = YES;
+                    }
+                    self.passwordLength = indexPath.row + 7;
+                    cell.selectedIconImageView.hidden = NO;
+                    cell.contentView.backgroundColor = GlobalSelectedGray;
+                }
+                else
+                {
+                    self.passwordLength = 6;
+                    cell.selectedIconImageView.hidden = YES;
+                    cell.contentView.backgroundColor = [UIColor clearColor];
+                }
+            }
+                break;
+            case 4:
+            {
+                if(self.hasUpperCase)
+                {
+                    self.hasUpperCase = NO;
+                    cell.selectedIconImageView.hidden = YES;
+                    cell.contentView.backgroundColor = [UIColor clearColor];
+                }
+                else
+                {
+                    self.hasUpperCase = YES;
+                    cell.selectedIconImageView.hidden = NO;
+                    cell.contentView.backgroundColor = GlobalSelectedGray;
+                }
+            }
+                break;
+            case 5 :
+            {
+                if(self.hasSpecialCharac)
+                {
+                    self.hasSpecialCharac = NO;
+                    cell.selectedIconImageView.hidden = YES;
+                    cell.contentView.backgroundColor = [UIColor clearColor];
+                }
+                else
+                {
+                    self.hasSpecialCharac = YES;
+                    cell.selectedIconImageView.hidden = NO;
+                    cell.contentView.backgroundColor = GlobalSelectedGray;
+                }
+            }
+                break;
+            default:
+                break;
+        }
+    }
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -10,5 +10,8 @@
 #import "GlobalHeader.h"
 
 @interface MyNextPasswordChoiceTableViewCell : UITableViewCell
+
 @property (nonatomic, strong) UIView *customSeperatorView;
+@property (nonatomic, strong) UILabel *customChoiceTitleLabel;
+@property (nonatomic, strong) UIImageView *selectedIconImageView;
 @end

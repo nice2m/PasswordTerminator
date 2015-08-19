@@ -14,6 +14,7 @@
 
 #define GlobalNavGray                       [UIColor darkGrayColor]
 #define GlobalGray                          [UIColor lightGrayColor]
+#define GlobalSelectedGray                  [UIColor lightGrayColor]
 
 #define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
