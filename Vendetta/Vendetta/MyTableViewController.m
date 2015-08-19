@@ -9,8 +9,10 @@
 #import "MyTableViewController.h"
 #import "UINavigationBar+Awesome.h"
 #import "MyNextPasswordTableViewCell.h"
+#import "PasswordFactory.h"
 
 @interface MyTableViewController ()
+@property (nonatomic, strong) NSString *code;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic) NSInteger seconds;
 @property (nonatomic, strong) UILabel *timerLabel;
@@ -26,7 +28,7 @@
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(timeUpdate:) userInfo:nil repeats:YES];
-    self.seconds = CELL_UPDATE_INTERVAL;
+    self.seconds = 0;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -57,6 +59,8 @@
     {
         self.seconds = CELL_UPDATE_INTERVAL;
         self.timerLabel.text = [NSString stringWithFormat:@"%ld秒后刷新",self.seconds];
+        self.code = [PasswordFactory passwordWithLength:8 withUppercase:YES withSpecialCharacters:YES];
+        self.codeLabel.text = self.code;
         return;
     }
     self.seconds--;

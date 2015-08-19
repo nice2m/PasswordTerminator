@@ -8,6 +8,7 @@
 
 #import "MyNextPasswordTableViewCell.h"
 #import "Encryption.h"
+#import "PasswordFactory.h"
 
 @implementation MyNextPasswordTableViewCell
 
@@ -31,6 +32,7 @@
         self.serialCodeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         _serialCodeLabel.font = [UIFont systemFontOfSize:MyNextPasswordCodeLabelFont];
         _serialCodeLabel.textColor = [UIColor blackColor];
+        _serialCodeLabel.textAlignment = NSTextAlignmentCenter;
         [_customBackgroundView addSubview:_serialCodeLabel];
         
         self.codeTitleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
@@ -50,11 +52,7 @@
     _timeLabel.frame = CGRectMake((ScreenWidth - timeLabelWidth)/2.0f, 20.0f, timeLabelWidth, MyNextPasswordTimeLabelFont);
     _timeLabel.text = @"30秒后刷新";
     
-    NSString *code = [Encryption getMd5String:[Encryption getMd5String:[NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]]]];
-    code = [code substringToIndex:8];
-    CGFloat codeLabelWidth = [UIKitHelper getTextWidthWithText:code andMaxHeight:MyNextPasswordTimeLabelFont andFont:[UIFont systemFontOfSize:MyNextPasswordCodeLabelFont]];
-    _serialCodeLabel.frame = CGRectMake((ScreenWidth - codeLabelWidth)/2.0f, _timeLabel.bottom + 10.0f, codeLabelWidth, MyNextPasswordCodeLabelFont);
-    _serialCodeLabel.text = code;
+    _serialCodeLabel.frame = CGRectMake(0.0f, _timeLabel.bottom + 10.0f, ScreenWidth, MyNextPasswordCodeLabelFont + 5.0f);
     
     CGFloat codeTitleWidth = [UIKitHelper getTextWidthWithText:@"你的下一个随机密码" andMaxHeight:MyNextPasswordTitleLabelFont andFont:[UIFont systemFontOfSize:MyNextPasswordTitleLabelFont]];
     _codeTitleLabel.frame = CGRectMake((ScreenWidth - codeTitleWidth)/2.0f, _serialCodeLabel.bottom + 10.0f, codeTitleWidth, MyNextPasswordTitleLabelFont);
