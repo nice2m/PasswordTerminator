@@ -33,7 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar lt_setBackgroundColor:GlobalGray];
+    [self.navigationController.navigationBar lt_setBackgroundColor:GlobalNavGray];
 }
 
 #pragma mark - Table view data source

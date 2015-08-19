@@ -12,6 +12,7 @@
 #import "UIViewExt.h"
 #import "UIKit+Helper.h"
 
+#define GlobalNavGray                       [UIColor darkGrayColor]
 #define GlobalGray                          [UIColor lightGrayColor]
 
 #define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width

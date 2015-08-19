@@ -13,6 +13,9 @@
 
 @property (nonatomic, strong) UIView *customBackgroundView;
 @property (nonatomic, strong) UILabel *timeLabel;
+@property (nonatomic, strong) UIButton *refreshButton;
 @property (nonatomic, strong) UILabel *serialCodeLabel;
 @property (nonatomic, strong) UILabel *codeTitleLabel;
+
+@property (nonatomic, copy) void (^refreshBlock)(void);
 @end

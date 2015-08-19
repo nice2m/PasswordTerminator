@@ -9,6 +9,7 @@
 #import "MyTableViewController.h"
 #import "UINavigationBar+Awesome.h"
 #import "MyNextPasswordTableViewCell.h"
+#import "MyNextPasswordChoiceTableViewCell.h"
 #import "PasswordFactory.h"
 
 @interface MyTableViewController ()
@@ -44,7 +45,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar lt_setBackgroundColor:GlobalGray];
+    [self.navigationController.navigationBar lt_setBackgroundColor:GlobalNavGray];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -57,14 +58,19 @@
 {
     if(self.seconds == 0)
     {
-        self.seconds = CELL_UPDATE_INTERVAL;
-        self.timerLabel.text = [NSString stringWithFormat:@"%ld秒后刷新",self.seconds];
-        self.code = [PasswordFactory passwordWithLength:8 withUppercase:YES withSpecialCharacters:YES];
-        self.codeLabel.text = self.code;
+        [self timeRefresh];
         return;
     }
     self.seconds--;
     self.timerLabel.text = [NSString stringWithFormat:@"%ld秒后刷新",self.seconds];
+}
+
+- (void)timeRefresh
+{
+    self.seconds = CELL_UPDATE_INTERVAL;
+    self.timerLabel.text = [NSString stringWithFormat:@"%ld秒后刷新",self.seconds];
+    self.code = [PasswordFactory passwordWithLength:8 withUppercase:YES withSpecialCharacters:YES];
+    self.codeLabel.text = self.code;
 }
 
 #pragma mark - Table view data source
@@ -105,6 +111,11 @@
             if(!cell)
             {
                 cell = [[MyNextPasswordTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"firstSectionCell"];
+                
+                __weak MyTableViewController *weakSelf = self;
+                cell.refreshBlock = ^(void){
+                    [weakSelf timeRefresh];
+                };
                 self.timerLabel = cell.timeLabel;
                 self.codeLabel = cell.serialCodeLabel;
             }
@@ -113,10 +124,10 @@
             break;
         case 1:
         {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fuck"];
+            MyNextPasswordChoiceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"secondSectionCell"];
             if(!cell)
             {
-                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"fuck"];
+                cell = [[MyNextPasswordChoiceTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"secondSectionCell"];
             }
             return cell;
         }

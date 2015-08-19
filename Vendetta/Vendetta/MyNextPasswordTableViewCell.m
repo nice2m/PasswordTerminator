@@ -24,6 +24,11 @@
         _customBackgroundView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_customBackgroundView];
         
+        self.refreshButton = [[UIButton alloc]initWithFrame:CGRectZero];
+        [_refreshButton setBackgroundImage:[UIImage imageNamed:@"refresh"] forState:UIControlStateNormal];
+        [_refreshButton addTarget:self action:@selector(customRefresh:) forControlEvents:UIControlEventTouchUpInside];
+        [_customBackgroundView addSubview:_refreshButton];
+        
         self.timeLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         _timeLabel.font = [UIFont systemFontOfSize:MyNextPasswordTimeLabelFont];
         _timeLabel.textColor = GlobalGray;
@@ -43,6 +48,14 @@
     return self;
 }
 
+- (void)customRefresh:(id)sender
+{
+    if(self.refreshBlock)
+    {
+        self.refreshBlock();
+    }
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -57,7 +70,7 @@
     CGFloat codeTitleWidth = [UIKitHelper getTextWidthWithText:@"你的下一个随机密码" andMaxHeight:MyNextPasswordTitleLabelFont andFont:[UIFont systemFontOfSize:MyNextPasswordTitleLabelFont]];
     _codeTitleLabel.frame = CGRectMake((ScreenWidth - codeTitleWidth)/2.0f, _serialCodeLabel.bottom + 10.0f, codeTitleWidth, MyNextPasswordTitleLabelFont);
     _codeTitleLabel.text = @"你的下一个随机密码";
-    
+    _refreshButton.frame = CGRectMake(_codeTitleLabel.right + 10.0f, _codeTitleLabel.top - 5.0f, 25.0f, 25.0f);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
