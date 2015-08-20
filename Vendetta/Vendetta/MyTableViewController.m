@@ -85,7 +85,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -95,7 +95,10 @@
             return 1;
             break;
         case 1:
-            return 6;
+            return 4;
+            break;
+        case 2:
+            return 2;
             break;
         default:
             return 0;
@@ -157,12 +160,26 @@
                         cell.customChoiceTitleLabel.text = @"生成10位长度密码";
                     }
                         break;
-                    case 4:
+                    default:
+                        break;
+                }
+            }
+            return cell;
+        }
+            break;
+        case 2:
+        {
+            MyNextPasswordChoiceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"thirdSectionCell"];
+            if(!cell)
+            {
+                cell = [[MyNextPasswordChoiceTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"thirdSectionCell"];
+                switch (indexPath.row) {
+                    case 0:
                     {
                         cell.customChoiceTitleLabel.text = @"密码中带有大写英文字母";
                     }
                         break;
-                    case 5:
+                    case 1:
                     {
                         cell.customChoiceTitleLabel.text = @"密码中带有特殊符号";
                     }
@@ -186,7 +203,7 @@
 {
     if(indexPath.section == 0)
     {
-        return 150.0f;
+        return 130.0f;
     }
     else
     {
@@ -200,7 +217,7 @@
     {
         return;
     }
-    else
+    else if(indexPath.section == 1)
     {
         MyNextPasswordChoiceTableViewCell *cell = (MyNextPasswordChoiceTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
         switch (indexPath.row) {
@@ -228,7 +245,16 @@
                 }
             }
                 break;
-            case 4:
+            default:
+                break;
+        }
+
+    }
+    else if(indexPath.section == 2)
+    {
+        MyNextPasswordChoiceTableViewCell *cell = (MyNextPasswordChoiceTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+        switch (indexPath.row) {
+            case 0:
             {
                 if(self.hasUpperCase)
                 {
@@ -244,7 +270,7 @@
                 }
             }
                 break;
-            case 5 :
+            case 1:
             {
                 if(self.hasSpecialCharac)
                 {
@@ -263,6 +289,48 @@
             default:
                 break;
         }
+
+    }
+    else
+    {
+        return;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
+    view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    switch (section) {
+        case 0:
+            return view;
+            break;
+        case 1:
+        case 2:
+        {
+            view.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, 20.0f);
+            return view;
+        }
+            break;
+        default:
+            return view;
+            break;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return 0.0f;
+            break;
+        case 1:
+        case 2:
+            return 20.0f;
+            break;
+        default:
+            return 0.0f;
+            break;
     }
 }
 

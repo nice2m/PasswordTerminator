@@ -19,6 +19,11 @@
     [super viewDidLoad];
     [self hideExtraCellLine];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    UIBarButtonItem *add = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewPassword)];
+    add.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = add;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -37,6 +42,10 @@
     [self.navigationController.navigationBar lt_setBackgroundColor:GlobalNavGray];
 }
 
+- (void)addNewPassword
+{
+    
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

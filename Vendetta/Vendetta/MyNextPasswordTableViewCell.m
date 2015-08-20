@@ -59,7 +59,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    _customBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, self.height - 20.0f);
+    _customBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, self.height);
     
     CGFloat timeLabelWidth = [UIKitHelper getTextWidthWithText:@"30秒后刷新" andMaxHeight:MyNextPasswordTimeLabelFont andFont:[UIFont systemFontOfSize:MyNextPasswordTimeLabelFont]];
     _timeLabel.frame = CGRectMake((ScreenWidth - timeLabelWidth)/2.0f, 20.0f, timeLabelWidth, MyNextPasswordTimeLabelFont);

@@ -32,6 +32,8 @@
 		222EE2DF1B860ECC00E65954 /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2C21B860ECC00E65954 /* GPBUnknownFieldSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		222EE2E01B860ECC00E65954 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2C51B860ECC00E65954 /* GPBUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		222EE2E11B860ECC00E65954 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2C81B860ECC00E65954 /* GPBWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2E51B86133A00E65954 /* Password.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2E31B86133A00E65954 /* Password.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2E61B86133A00E65954 /* password.proto in Resources */ = {isa = PBXBuildFile; fileRef = 222EE2E41B86133A00E65954 /* password.proto */; };
 		2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */; };
 		2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258E8701B7B87CD0009CC41 /* MyTableViewController.m */; };
 		229117E01B7CDA8B0078A55C /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117DF1B7CDA8B0078A55C /* UINavigationBar+Awesome.m */; };
@@ -126,6 +128,9 @@
 		222EE2C61B860ECC00E65954 /* GPBWellKnownTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBWellKnownTypes.h; path = protoBuf/GPBWellKnownTypes.h; sourceTree = "<group>"; };
 		222EE2C71B860ECC00E65954 /* GPBWireFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBWireFormat.h; path = protoBuf/GPBWireFormat.h; sourceTree = "<group>"; };
 		222EE2C81B860ECC00E65954 /* GPBWireFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBWireFormat.m; path = protoBuf/GPBWireFormat.m; sourceTree = "<group>"; };
+		222EE2E21B86133A00E65954 /* Password.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Password.pbobjc.h; sourceTree = "<group>"; };
+		222EE2E31B86133A00E65954 /* Password.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Password.pbobjc.m; sourceTree = "<group>"; };
+		222EE2E41B86133A00E65954 /* password.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = password.proto; sourceTree = "<group>"; };
 		2258E86C1B7B87C10009CC41 /* PassboxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassboxTableViewController.h; sourceTree = "<group>"; };
 		2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassboxTableViewController.m; sourceTree = "<group>"; };
 		2258E86F1B7B87CD0009CC41 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
@@ -318,6 +323,9 @@
 		229117E51B7ED99D0078A55C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				222EE2E21B86133A00E65954 /* Password.pbobjc.h */,
+				222EE2E31B86133A00E65954 /* Password.pbobjc.m */,
+				222EE2E41B86133A00E65954 /* password.proto */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -467,6 +475,7 @@
 				22BD26931B7A3E6200FA3337 /* Main.storyboard in Resources */,
 				22BD26981B7A3E6200FA3337 /* LaunchScreen.xib in Resources */,
 				22BD26951B7A3E6200FA3337 /* Images.xcassets in Resources */,
+				222EE2E61B86133A00E65954 /* password.proto in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +506,7 @@
 				22A9FABD1B84D5D200929CBB /* MyNextPasswordChoiceTableViewCell.m in Sources */,
 				222EE2DD1B860ECC00E65954 /* GPBRootObject.m in Sources */,
 				229117EE1B80D2E00078A55C /* UIViewExt.m in Sources */,
+				222EE2E51B86133A00E65954 /* Password.pbobjc.m in Sources */,
 				2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */,
 				222EE2D81B860ECC00E65954 /* GPBDescriptor.m in Sources */,
 				22BD26B51B7B780100FA3337 /* TabViewController.m in Sources */,
