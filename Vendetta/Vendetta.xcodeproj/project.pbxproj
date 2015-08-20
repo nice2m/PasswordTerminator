@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222EE2C91B860ECC00E65954 /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2881B860ECC00E65954 /* GPBWellKnownTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2CA1B860ECC00E65954 /* Any.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE28C1B860ECC00E65954 /* Any.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2CB1B860ECC00E65954 /* Api.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE28E1B860ECC00E65954 /* Api.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2CC1B860ECC00E65954 /* Descriptor.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2901B860ECC00E65954 /* Descriptor.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2CD1B860ECC00E65954 /* Duration.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2921B860ECC00E65954 /* Duration.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2CE1B860ECC00E65954 /* Empty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2941B860ECC00E65954 /* Empty.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2CF1B860ECC00E65954 /* FieldMask.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2961B860ECC00E65954 /* FieldMask.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D01B860ECC00E65954 /* SourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2981B860ECC00E65954 /* SourceContext.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D11B860ECC00E65954 /* Struct.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE29A1B860ECC00E65954 /* Struct.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D21B860ECC00E65954 /* Timestamp.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE29C1B860ECC00E65954 /* Timestamp.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D31B860ECC00E65954 /* Type.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE29E1B860ECC00E65954 /* Type.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D41B860ECC00E65954 /* Wrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2A01B860ECC00E65954 /* Wrappers.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D51B860ECC00E65954 /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2A31B860ECC00E65954 /* GPBArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D61B860ECC00E65954 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2A71B860ECC00E65954 /* GPBCodedInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D71B860ECC00E65954 /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2A91B860ECC00E65954 /* GPBCodedOutputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D81B860ECC00E65954 /* GPBDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2AC1B860ECC00E65954 /* GPBDescriptor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2D91B860ECC00E65954 /* GPBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2AF1B860ECC00E65954 /* GPBDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2DA1B860ECC00E65954 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2B11B860ECC00E65954 /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2DB1B860ECC00E65954 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2B31B860ECC00E65954 /* GPBExtensionRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2DC1B860ECC00E65954 /* GPBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2B61B860ECC00E65954 /* GPBMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2DD1B860ECC00E65954 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2BB1B860ECC00E65954 /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2DE1B860ECC00E65954 /* GPBUnknownField.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2BF1B860ECC00E65954 /* GPBUnknownField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2DF1B860ECC00E65954 /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2C21B860ECC00E65954 /* GPBUnknownFieldSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2E01B860ECC00E65954 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2C51B860ECC00E65954 /* GPBUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		222EE2E11B860ECC00E65954 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 222EE2C81B860ECC00E65954 /* GPBWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */; };
 		2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2258E8701B7B87CD0009CC41 /* MyTableViewController.m */; };
 		229117E01B7CDA8B0078A55C /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 229117DF1B7CDA8B0078A55C /* UINavigationBar+Awesome.m */; };
@@ -38,6 +63,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		222EE2881B860ECC00E65954 /* GPBWellKnownTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBWellKnownTypes.m; path = protoBuf/GPBWellKnownTypes.m; sourceTree = "<group>"; };
+		222EE28B1B860ECC00E65954 /* Any.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Any.pbobjc.h; sourceTree = "<group>"; };
+		222EE28C1B860ECC00E65954 /* Any.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Any.pbobjc.m; sourceTree = "<group>"; };
+		222EE28D1B860ECC00E65954 /* Api.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.pbobjc.h; sourceTree = "<group>"; };
+		222EE28E1B860ECC00E65954 /* Api.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.pbobjc.m; sourceTree = "<group>"; };
+		222EE28F1B860ECC00E65954 /* Descriptor.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Descriptor.pbobjc.h; sourceTree = "<group>"; };
+		222EE2901B860ECC00E65954 /* Descriptor.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Descriptor.pbobjc.m; sourceTree = "<group>"; };
+		222EE2911B860ECC00E65954 /* Duration.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Duration.pbobjc.h; sourceTree = "<group>"; };
+		222EE2921B860ECC00E65954 /* Duration.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Duration.pbobjc.m; sourceTree = "<group>"; };
+		222EE2931B860ECC00E65954 /* Empty.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Empty.pbobjc.h; sourceTree = "<group>"; };
+		222EE2941B860ECC00E65954 /* Empty.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empty.pbobjc.m; sourceTree = "<group>"; };
+		222EE2951B860ECC00E65954 /* FieldMask.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldMask.pbobjc.h; sourceTree = "<group>"; };
+		222EE2961B860ECC00E65954 /* FieldMask.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldMask.pbobjc.m; sourceTree = "<group>"; };
+		222EE2971B860ECC00E65954 /* SourceContext.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceContext.pbobjc.h; sourceTree = "<group>"; };
+		222EE2981B860ECC00E65954 /* SourceContext.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceContext.pbobjc.m; sourceTree = "<group>"; };
+		222EE2991B860ECC00E65954 /* Struct.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Struct.pbobjc.h; sourceTree = "<group>"; };
+		222EE29A1B860ECC00E65954 /* Struct.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Struct.pbobjc.m; sourceTree = "<group>"; };
+		222EE29B1B860ECC00E65954 /* Timestamp.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timestamp.pbobjc.h; sourceTree = "<group>"; };
+		222EE29C1B860ECC00E65954 /* Timestamp.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timestamp.pbobjc.m; sourceTree = "<group>"; };
+		222EE29D1B860ECC00E65954 /* Type.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.pbobjc.h; sourceTree = "<group>"; };
+		222EE29E1B860ECC00E65954 /* Type.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.pbobjc.m; sourceTree = "<group>"; };
+		222EE29F1B860ECC00E65954 /* Wrappers.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wrappers.pbobjc.h; sourceTree = "<group>"; };
+		222EE2A01B860ECC00E65954 /* Wrappers.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wrappers.pbobjc.m; sourceTree = "<group>"; };
+		222EE2A11B860ECC00E65954 /* GPBArray_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBArray_PackagePrivate.h; path = protoBuf/GPBArray_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2A21B860ECC00E65954 /* GPBArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBArray.h; path = protoBuf/GPBArray.h; sourceTree = "<group>"; };
+		222EE2A31B860ECC00E65954 /* GPBArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBArray.m; path = protoBuf/GPBArray.m; sourceTree = "<group>"; };
+		222EE2A41B860ECC00E65954 /* GPBBootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBBootstrap.h; path = protoBuf/GPBBootstrap.h; sourceTree = "<group>"; };
+		222EE2A51B860ECC00E65954 /* GPBCodedInputStream_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBCodedInputStream_PackagePrivate.h; path = protoBuf/GPBCodedInputStream_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2A61B860ECC00E65954 /* GPBCodedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBCodedInputStream.h; path = protoBuf/GPBCodedInputStream.h; sourceTree = "<group>"; };
+		222EE2A71B860ECC00E65954 /* GPBCodedInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBCodedInputStream.m; path = protoBuf/GPBCodedInputStream.m; sourceTree = "<group>"; };
+		222EE2A81B860ECC00E65954 /* GPBCodedOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBCodedOutputStream.h; path = protoBuf/GPBCodedOutputStream.h; sourceTree = "<group>"; };
+		222EE2A91B860ECC00E65954 /* GPBCodedOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBCodedOutputStream.m; path = protoBuf/GPBCodedOutputStream.m; sourceTree = "<group>"; };
+		222EE2AA1B860ECC00E65954 /* GPBDescriptor_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBDescriptor_PackagePrivate.h; path = protoBuf/GPBDescriptor_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2AB1B860ECC00E65954 /* GPBDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBDescriptor.h; path = protoBuf/GPBDescriptor.h; sourceTree = "<group>"; };
+		222EE2AC1B860ECC00E65954 /* GPBDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBDescriptor.m; path = protoBuf/GPBDescriptor.m; sourceTree = "<group>"; };
+		222EE2AD1B860ECC00E65954 /* GPBDictionary_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBDictionary_PackagePrivate.h; path = protoBuf/GPBDictionary_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2AE1B860ECC00E65954 /* GPBDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBDictionary.h; path = protoBuf/GPBDictionary.h; sourceTree = "<group>"; };
+		222EE2AF1B860ECC00E65954 /* GPBDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBDictionary.m; path = protoBuf/GPBDictionary.m; sourceTree = "<group>"; };
+		222EE2B01B860ECC00E65954 /* GPBExtensionInternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBExtensionInternals.h; path = protoBuf/GPBExtensionInternals.h; sourceTree = "<group>"; };
+		222EE2B11B860ECC00E65954 /* GPBExtensionInternals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBExtensionInternals.m; path = protoBuf/GPBExtensionInternals.m; sourceTree = "<group>"; };
+		222EE2B21B860ECC00E65954 /* GPBExtensionRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBExtensionRegistry.h; path = protoBuf/GPBExtensionRegistry.h; sourceTree = "<group>"; };
+		222EE2B31B860ECC00E65954 /* GPBExtensionRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBExtensionRegistry.m; path = protoBuf/GPBExtensionRegistry.m; sourceTree = "<group>"; };
+		222EE2B41B860ECC00E65954 /* GPBMessage_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBMessage_PackagePrivate.h; path = protoBuf/GPBMessage_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2B51B860ECC00E65954 /* GPBMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBMessage.h; path = protoBuf/GPBMessage.h; sourceTree = "<group>"; };
+		222EE2B61B860ECC00E65954 /* GPBMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBMessage.m; path = protoBuf/GPBMessage.m; sourceTree = "<group>"; };
+		222EE2B71B860ECC00E65954 /* GPBProtocolBuffers_RuntimeSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBProtocolBuffers_RuntimeSupport.h; path = protoBuf/GPBProtocolBuffers_RuntimeSupport.h; sourceTree = "<group>"; };
+		222EE2B81B860ECC00E65954 /* GPBProtocolBuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBProtocolBuffers.h; path = protoBuf/GPBProtocolBuffers.h; sourceTree = "<group>"; };
+		222EE2B91B860ECC00E65954 /* GPBRootObject_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBRootObject_PackagePrivate.h; path = protoBuf/GPBRootObject_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2BA1B860ECC00E65954 /* GPBRootObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBRootObject.h; path = protoBuf/GPBRootObject.h; sourceTree = "<group>"; };
+		222EE2BB1B860ECC00E65954 /* GPBRootObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBRootObject.m; path = protoBuf/GPBRootObject.m; sourceTree = "<group>"; };
+		222EE2BC1B860ECC00E65954 /* GPBRuntimeTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBRuntimeTypes.h; path = protoBuf/GPBRuntimeTypes.h; sourceTree = "<group>"; };
+		222EE2BD1B860ECC00E65954 /* GPBUnknownField_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBUnknownField_PackagePrivate.h; path = protoBuf/GPBUnknownField_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2BE1B860ECC00E65954 /* GPBUnknownField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBUnknownField.h; path = protoBuf/GPBUnknownField.h; sourceTree = "<group>"; };
+		222EE2BF1B860ECC00E65954 /* GPBUnknownField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBUnknownField.m; path = protoBuf/GPBUnknownField.m; sourceTree = "<group>"; };
+		222EE2C01B860ECC00E65954 /* GPBUnknownFieldSet_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFieldSet_PackagePrivate.h; path = protoBuf/GPBUnknownFieldSet_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2C11B860ECC00E65954 /* GPBUnknownFieldSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFieldSet.h; path = protoBuf/GPBUnknownFieldSet.h; sourceTree = "<group>"; };
+		222EE2C21B860ECC00E65954 /* GPBUnknownFieldSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBUnknownFieldSet.m; path = protoBuf/GPBUnknownFieldSet.m; sourceTree = "<group>"; };
+		222EE2C31B860ECC00E65954 /* GPBUtilities_PackagePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBUtilities_PackagePrivate.h; path = protoBuf/GPBUtilities_PackagePrivate.h; sourceTree = "<group>"; };
+		222EE2C41B860ECC00E65954 /* GPBUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBUtilities.h; path = protoBuf/GPBUtilities.h; sourceTree = "<group>"; };
+		222EE2C51B860ECC00E65954 /* GPBUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBUtilities.m; path = protoBuf/GPBUtilities.m; sourceTree = "<group>"; };
+		222EE2C61B860ECC00E65954 /* GPBWellKnownTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBWellKnownTypes.h; path = protoBuf/GPBWellKnownTypes.h; sourceTree = "<group>"; };
+		222EE2C71B860ECC00E65954 /* GPBWireFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPBWireFormat.h; path = protoBuf/GPBWireFormat.h; sourceTree = "<group>"; };
+		222EE2C81B860ECC00E65954 /* GPBWireFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPBWireFormat.m; path = protoBuf/GPBWireFormat.m; sourceTree = "<group>"; };
 		2258E86C1B7B87C10009CC41 /* PassboxTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassboxTableViewController.h; sourceTree = "<group>"; };
 		2258E86D1B7B87C10009CC41 /* PassboxTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassboxTableViewController.m; sourceTree = "<group>"; };
 		2258E86F1B7B87CD0009CC41 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
@@ -94,9 +182,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		222EE2871B860E6000E65954 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				222EE2881B860ECC00E65954 /* GPBWellKnownTypes.m */,
+				222EE2891B860ECC00E65954 /* google */,
+				222EE2A11B860ECC00E65954 /* GPBArray_PackagePrivate.h */,
+				222EE2A21B860ECC00E65954 /* GPBArray.h */,
+				222EE2A31B860ECC00E65954 /* GPBArray.m */,
+				222EE2A41B860ECC00E65954 /* GPBBootstrap.h */,
+				222EE2A51B860ECC00E65954 /* GPBCodedInputStream_PackagePrivate.h */,
+				222EE2A61B860ECC00E65954 /* GPBCodedInputStream.h */,
+				222EE2A71B860ECC00E65954 /* GPBCodedInputStream.m */,
+				222EE2A81B860ECC00E65954 /* GPBCodedOutputStream.h */,
+				222EE2A91B860ECC00E65954 /* GPBCodedOutputStream.m */,
+				222EE2AA1B860ECC00E65954 /* GPBDescriptor_PackagePrivate.h */,
+				222EE2AB1B860ECC00E65954 /* GPBDescriptor.h */,
+				222EE2AC1B860ECC00E65954 /* GPBDescriptor.m */,
+				222EE2AD1B860ECC00E65954 /* GPBDictionary_PackagePrivate.h */,
+				222EE2AE1B860ECC00E65954 /* GPBDictionary.h */,
+				222EE2AF1B860ECC00E65954 /* GPBDictionary.m */,
+				222EE2B01B860ECC00E65954 /* GPBExtensionInternals.h */,
+				222EE2B11B860ECC00E65954 /* GPBExtensionInternals.m */,
+				222EE2B21B860ECC00E65954 /* GPBExtensionRegistry.h */,
+				222EE2B31B860ECC00E65954 /* GPBExtensionRegistry.m */,
+				222EE2B41B860ECC00E65954 /* GPBMessage_PackagePrivate.h */,
+				222EE2B51B860ECC00E65954 /* GPBMessage.h */,
+				222EE2B61B860ECC00E65954 /* GPBMessage.m */,
+				222EE2B71B860ECC00E65954 /* GPBProtocolBuffers_RuntimeSupport.h */,
+				222EE2B81B860ECC00E65954 /* GPBProtocolBuffers.h */,
+				222EE2B91B860ECC00E65954 /* GPBRootObject_PackagePrivate.h */,
+				222EE2BA1B860ECC00E65954 /* GPBRootObject.h */,
+				222EE2BB1B860ECC00E65954 /* GPBRootObject.m */,
+				222EE2BC1B860ECC00E65954 /* GPBRuntimeTypes.h */,
+				222EE2BD1B860ECC00E65954 /* GPBUnknownField_PackagePrivate.h */,
+				222EE2BE1B860ECC00E65954 /* GPBUnknownField.h */,
+				222EE2BF1B860ECC00E65954 /* GPBUnknownField.m */,
+				222EE2C01B860ECC00E65954 /* GPBUnknownFieldSet_PackagePrivate.h */,
+				222EE2C11B860ECC00E65954 /* GPBUnknownFieldSet.h */,
+				222EE2C21B860ECC00E65954 /* GPBUnknownFieldSet.m */,
+				222EE2C31B860ECC00E65954 /* GPBUtilities_PackagePrivate.h */,
+				222EE2C41B860ECC00E65954 /* GPBUtilities.h */,
+				222EE2C51B860ECC00E65954 /* GPBUtilities.m */,
+				222EE2C61B860ECC00E65954 /* GPBWellKnownTypes.h */,
+				222EE2C71B860ECC00E65954 /* GPBWireFormat.h */,
+				222EE2C81B860ECC00E65954 /* GPBWireFormat.m */,
+			);
+			name = protobuf;
+			sourceTree = "<group>";
+		};
+		222EE2891B860ECC00E65954 /* google */ = {
+			isa = PBXGroup;
+			children = (
+				222EE28A1B860ECC00E65954 /* protobuf */,
+			);
+			name = google;
+			path = protoBuf/google;
+			sourceTree = "<group>";
+		};
+		222EE28A1B860ECC00E65954 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				222EE28B1B860ECC00E65954 /* Any.pbobjc.h */,
+				222EE28C1B860ECC00E65954 /* Any.pbobjc.m */,
+				222EE28D1B860ECC00E65954 /* Api.pbobjc.h */,
+				222EE28E1B860ECC00E65954 /* Api.pbobjc.m */,
+				222EE28F1B860ECC00E65954 /* Descriptor.pbobjc.h */,
+				222EE2901B860ECC00E65954 /* Descriptor.pbobjc.m */,
+				222EE2911B860ECC00E65954 /* Duration.pbobjc.h */,
+				222EE2921B860ECC00E65954 /* Duration.pbobjc.m */,
+				222EE2931B860ECC00E65954 /* Empty.pbobjc.h */,
+				222EE2941B860ECC00E65954 /* Empty.pbobjc.m */,
+				222EE2951B860ECC00E65954 /* FieldMask.pbobjc.h */,
+				222EE2961B860ECC00E65954 /* FieldMask.pbobjc.m */,
+				222EE2971B860ECC00E65954 /* SourceContext.pbobjc.h */,
+				222EE2981B860ECC00E65954 /* SourceContext.pbobjc.m */,
+				222EE2991B860ECC00E65954 /* Struct.pbobjc.h */,
+				222EE29A1B860ECC00E65954 /* Struct.pbobjc.m */,
+				222EE29B1B860ECC00E65954 /* Timestamp.pbobjc.h */,
+				222EE29C1B860ECC00E65954 /* Timestamp.pbobjc.m */,
+				222EE29D1B860ECC00E65954 /* Type.pbobjc.h */,
+				222EE29E1B860ECC00E65954 /* Type.pbobjc.m */,
+				222EE29F1B860ECC00E65954 /* Wrappers.pbobjc.h */,
+				222EE2A01B860ECC00E65954 /* Wrappers.pbobjc.m */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
 		229117DD1B7CDA660078A55C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				222EE2871B860E6000E65954 /* protobuf */,
 				22A9FAA61B8376EC00929CBB /* Encryption.h */,
 				22A9FAA71B8376EC00929CBB /* Encryption.m */,
 				229117EC1B80D2E00078A55C /* UIViewExt.h */,
@@ -309,19 +485,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */,
+				222EE2D31B860ECC00E65954 /* Type.pbobjc.m in Sources */,
+				222EE2E01B860ECC00E65954 /* GPBUtilities.m in Sources */,
+				222EE2CC1B860ECC00E65954 /* Descriptor.pbobjc.m in Sources */,
 				229117E01B7CDA8B0078A55C /* UINavigationBar+Awesome.m in Sources */,
+				222EE2CD1B860ECC00E65954 /* Duration.pbobjc.m in Sources */,
 				22A9FAC01B85670E00929CBB /* CacheManager.m in Sources */,
 				2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */,
 				22BD26871B7A3E6200FA3337 /* main.m in Sources */,
+				222EE2D11B860ECC00E65954 /* Struct.pbobjc.m in Sources */,
 				22A9FABD1B84D5D200929CBB /* MyNextPasswordChoiceTableViewCell.m in Sources */,
+				222EE2DD1B860ECC00E65954 /* GPBRootObject.m in Sources */,
 				229117EE1B80D2E00078A55C /* UIViewExt.m in Sources */,
 				2258E86E1B7B87C10009CC41 /* PassboxTableViewController.m in Sources */,
+				222EE2D81B860ECC00E65954 /* GPBDescriptor.m in Sources */,
 				22BD26B51B7B780100FA3337 /* TabViewController.m in Sources */,
 				22A9FABA1B84C36800929CBB /* PasswordFactory.m in Sources */,
+				222EE2CB1B860ECC00E65954 /* Api.pbobjc.m in Sources */,
 				229117E81B802CA70078A55C /* MyNextPasswordTableViewCell.m in Sources */,
+				222EE2DC1B860ECC00E65954 /* GPBMessage.m in Sources */,
+				222EE2E11B860ECC00E65954 /* GPBWireFormat.m in Sources */,
+				222EE2D61B860ECC00E65954 /* GPBCodedInputStream.m in Sources */,
 				22A9FAA81B8376EC00929CBB /* Encryption.m in Sources */,
 				22A9FAA51B83754B00929CBB /* UIKit+Helper.m in Sources */,
+				222EE2D51B860ECC00E65954 /* GPBArray.m in Sources */,
+				222EE2CA1B860ECC00E65954 /* Any.pbobjc.m in Sources */,
+				222EE2D71B860ECC00E65954 /* GPBCodedOutputStream.m in Sources */,
+				222EE2CF1B860ECC00E65954 /* FieldMask.pbobjc.m in Sources */,
+				222EE2DA1B860ECC00E65954 /* GPBExtensionInternals.m in Sources */,
+				222EE2D41B860ECC00E65954 /* Wrappers.pbobjc.m in Sources */,
+				222EE2C91B860ECC00E65954 /* GPBWellKnownTypes.m in Sources */,
+				222EE2D91B860ECC00E65954 /* GPBDictionary.m in Sources */,
+				222EE2D01B860ECC00E65954 /* SourceContext.pbobjc.m in Sources */,
+				222EE2CE1B860ECC00E65954 /* Empty.pbobjc.m in Sources */,
+				222EE2DB1B860ECC00E65954 /* GPBExtensionRegistry.m in Sources */,
+				222EE2DE1B860ECC00E65954 /* GPBUnknownField.m in Sources */,
 				229117EB1B802D010078A55C /* PassboxItemTableViewCell.m in Sources */,
+				222EE2D21B860ECC00E65954 /* Timestamp.pbobjc.m in Sources */,
+				222EE2DF1B860ECC00E65954 /* GPBUnknownFieldSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +649,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Vendetta/protoBuf",
+				);
 				INFOPLIST_FILE = Vendetta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -460,6 +666,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/Vendetta/protoBuf",
+				);
 				INFOPLIST_FILE = Vendetta/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

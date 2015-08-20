@@ -106,12 +106,12 @@
     [fileManager removeItemAtPath:cacheFilePath error:nil];
 }
 
-- (void) savePasswordData:(NSData *)content
+- (void)savePasswordData:(NSData *)content
 {
     [self saveWithFilepath:@"password" andContent:content];
 }
 
-- (id)getPasswordData
+- (NSData *)getPasswordData
 {
     return [self getCacheWithFilepath:@"password"];
 }

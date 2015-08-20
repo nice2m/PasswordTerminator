@@ -12,4 +12,26 @@
 
 @property(nonatomic,copy) NSString  *rootCachePath;
 
+- (BOOL)storeFileToCachepath:(NSString *)cacheFilePath
+              andFileContent:(NSData *)content;
+
+- (void)writeFileToCacheWithFilename:(NSString *)filename
+                      andFileContent:(NSData *)content;
+
+- (NSData *)getCacheWithFilepath:(NSString *)path;
+
+- (NSData *)readCacheFilename:(NSString *)filename;
+
+- (NSString *)getCacheFilePath:(NSString *)filename;
+
+- (void)clearAllCache;
+
+- (void)saveWithFilepath:(NSString *)path
+              andContent:(NSData *)content;
+
+- (void)clearWithFilepath:(NSString *)path;
+
+- (void)savePasswordData:(NSData *)content;
+
+- (NSData *)getPasswordData;
 @end
