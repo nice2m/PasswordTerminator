@@ -17,6 +17,7 @@
 		22A9FAA81B8376EC00929CBB /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9FAA71B8376EC00929CBB /* Encryption.m */; };
 		22A9FABA1B84C36800929CBB /* PasswordFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9FAB91B84C36800929CBB /* PasswordFactory.m */; };
 		22A9FABD1B84D5D200929CBB /* MyNextPasswordChoiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9FABC1B84D5D200929CBB /* MyNextPasswordChoiceTableViewCell.m */; };
+		22A9FAC01B85670E00929CBB /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A9FABF1B85670E00929CBB /* CacheManager.m */; };
 		22BD26871B7A3E6200FA3337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26861B7A3E6200FA3337 /* main.m */; };
 		22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BD26891B7A3E6200FA3337 /* AppDelegate.m */; };
 		22BD26931B7A3E6200FA3337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BD26911B7A3E6200FA3337 /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 		22A9FAB91B84C36800929CBB /* PasswordFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordFactory.m; sourceTree = "<group>"; };
 		22A9FABB1B84D5D200929CBB /* MyNextPasswordChoiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNextPasswordChoiceTableViewCell.h; sourceTree = "<group>"; };
 		22A9FABC1B84D5D200929CBB /* MyNextPasswordChoiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNextPasswordChoiceTableViewCell.m; sourceTree = "<group>"; };
+		22A9FABE1B85670E00929CBB /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
+		22A9FABF1B85670E00929CBB /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		22BD26811B7A3E6200FA3337 /* Vendetta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vendetta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BD26851B7A3E6200FA3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22BD26861B7A3E6200FA3337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,7 +94,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		229117DD1B7CDA660078A55C /* All Third */ = {
+		229117DD1B7CDA660078A55C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				22A9FAA61B8376EC00929CBB /* Encryption.h */,
@@ -104,8 +107,10 @@
 				22A9FAA41B83754B00929CBB /* UIKit+Helper.m */,
 				22A9FAB81B84C36800929CBB /* PasswordFactory.h */,
 				22A9FAB91B84C36800929CBB /* PasswordFactory.m */,
+				22A9FABE1B85670E00929CBB /* CacheManager.h */,
+				22A9FABF1B85670E00929CBB /* CacheManager.m */,
 			);
-			name = "All Third";
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		229117E31B7ED6FC0078A55C /* View */ = {
@@ -165,7 +170,7 @@
 				229117E51B7ED99D0078A55C /* Model */,
 				229117E41B7ED7090078A55C /* Controller */,
 				229117E31B7ED6FC0078A55C /* View */,
-				229117DD1B7CDA660078A55C /* All Third */,
+				229117DD1B7CDA660078A55C /* Utils */,
 				22BD26841B7A3E6200FA3337 /* Supporting Files */,
 			);
 			path = Vendetta;
@@ -305,6 +310,7 @@
 			files = (
 				22BD268A1B7A3E6200FA3337 /* AppDelegate.m in Sources */,
 				229117E01B7CDA8B0078A55C /* UINavigationBar+Awesome.m in Sources */,
+				22A9FAC01B85670E00929CBB /* CacheManager.m in Sources */,
 				2258E8711B7B87CD0009CC41 /* MyTableViewController.m in Sources */,
 				22BD26871B7A3E6200FA3337 /* main.m in Sources */,
 				22A9FABD1B84D5D200929CBB /* MyNextPasswordChoiceTableViewCell.m in Sources */,
