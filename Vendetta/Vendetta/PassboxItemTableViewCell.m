@@ -10,9 +10,21 @@
 
 @implementation PassboxItemTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if(self)
+    {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return self;
 }
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

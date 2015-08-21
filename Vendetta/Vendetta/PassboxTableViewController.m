@@ -8,9 +8,15 @@
 
 #import "PassboxTableViewController.h"
 #import "UINavigationBar+Awesome.h"
+#import "AddNewPasswordItemView.h"
+#import "UIImage+ImageEffects.h"
 
 @interface PassboxTableViewController ()
-
+{
+    BOOL _isAddViewShown;
+}
+@property (nonatomic, strong) AddNewPasswordItemView *addView;
+@property (nonatomic, strong) UIImageView *blurBackgroundView;
 @end
 
 @implementation PassboxTableViewController
@@ -19,13 +25,19 @@
     [super viewDidLoad];
     [self hideExtraCellLine];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     UIBarButtonItem *add = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewPassword)];
     add.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = add;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.addView = [[AddNewPasswordItemView alloc]initWithFrame:CGRectMake(15.0f, -100.0f, ScreenWidth - 30.0f, 300.0f)];
+    _addView.alpha = 0.0f;
+    [self.view addSubview:_addView];
+    
+    _blurBackgroundView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:_blurBackgroundView];
+    [self.view sendSubviewToBack:_blurBackgroundView];
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -39,13 +51,36 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setTranslucent:YES];
     [self.navigationController.navigationBar lt_setBackgroundColor:GlobalNavGray];
 }
 
 - (void)addNewPassword
 {
-    
+    if(!_isAddViewShown)
+    {
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            _blurBackgroundView.image = [[self.view convertViewToImage] applyBlurWithRadius:15.0f tintColor:[UIColor colorWithWhite:0.7f alpha:0.4f] saturationDeltaFactor:1.0f maskImage:nil];
+            [self.view bringSubviewToFront:_blurBackgroundView];
+            [self.view bringSubviewToFront:_addView];
+            self.addView.frame = CGRectMake(self.addView.left, 30.0f, self.addView.width, self.addView.height);
+            self.addView.alpha = 1.0f;
+        }];
+        _isAddViewShown = YES;
+    }
+    else
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.addView.frame = CGRectMake(self.addView.left, -100.0f, self.addView.width, self.addView.height);
+            self.addView.alpha = 0.0f;
+            _blurBackgroundView.image = nil;
+            [self.view sendSubviewToBack:_blurBackgroundView];
+        }];
+        _isAddViewShown = NO;
+    }
 }
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -74,7 +109,6 @@
     }
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.

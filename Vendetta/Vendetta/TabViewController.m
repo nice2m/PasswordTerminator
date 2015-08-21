@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.selectedIndex = 1;
+    self.selectedIndex = 0;
     self.delegate=self;
     UITabBarItem *fuck=[self.tabBar.items objectAtIndex:0];
     UIImage *img1=[UIImage imageNamed:@"first"];
