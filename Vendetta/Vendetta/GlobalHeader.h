@@ -25,4 +25,6 @@
 #define MyNextPasswordTitleLabelFont        20.0f
 
 #define CELL_UPDATE_INTERVAL 30
+
+#define ADD_VIEW_GLOBAL_LEFT_PADDING        15.0f
 #endif
