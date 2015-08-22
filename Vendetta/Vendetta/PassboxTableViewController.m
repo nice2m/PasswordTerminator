@@ -33,6 +33,18 @@
     
     self.addView = [[AddNewPasswordItemView alloc]initWithFrame:CGRectMake(15.0f, -100.0f, ScreenWidth - 30.0f, 300.0f)];
     _addView.alpha = 0.0f;
+    
+    __weak PassboxTableViewController *weakSelf = self;
+    _addView.cancelBlock = ^(void){
+        [weakSelf.view endEditing:YES];
+        [UIView animateWithDuration:0.3 animations:^{
+            weakSelf.addView.frame = CGRectMake(weakSelf.addView.left, -100.0f, weakSelf.addView.width, weakSelf.addView.height);
+            weakSelf.addView.alpha = 0.0f;
+            weakSelf.blurBackgroundView.image = nil;
+            [weakSelf.view sendSubviewToBack:weakSelf.blurBackgroundView];
+        }];
+        _isAddViewShown = NO;
+    };
     [self.view addSubview:_addView];
     
     _blurBackgroundView = [[UIImageView alloc]initWithFrame:self.view.bounds];
@@ -59,7 +71,7 @@
 {
     if(!_isAddViewShown)
     {
-        
+        self.addView.passwordCodeTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentCode"];
         [UIView animateWithDuration:0.3 animations:^{
             _blurBackgroundView.image = [[self.view convertViewToImage] applyBlurWithRadius:15.0f tintColor:[UIColor colorWithWhite:0.7f alpha:0.4f] saturationDeltaFactor:1.0f maskImage:nil];
             [self.view bringSubviewToFront:_blurBackgroundView];
@@ -71,6 +83,7 @@
     }
     else
     {
+        [self.view endEditing:YES];
         [UIView animateWithDuration:0.3 animations:^{
             self.addView.frame = CGRectMake(self.addView.left, -100.0f, self.addView.width, self.addView.height);
             self.addView.alpha = 0.0f;
@@ -110,6 +123,10 @@
     return cell;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

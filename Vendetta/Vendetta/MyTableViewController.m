@@ -79,7 +79,14 @@
     self.seconds = CELL_UPDATE_INTERVAL;
     self.timerLabel.text = [NSString stringWithFormat:@"%ld秒后刷新",self.seconds];
     self.code = [PasswordFactory passwordWithLength:self.passwordLength withUppercase:self.hasUpperCase withSpecialCharacters:self.hasSpecialCharac];
-    [[NSUserDefaults standardUserDefaults] setObject:self.code forKey:@"currentCode"];
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"currentCode"])
+    {
+        [[NSUserDefaults standardUserDefaults] setValue:self.code forKey:@"currentCode"];
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:self.code forKey:@"currentCode"];
+    }
 
     self.codeLabel.text = self.code;
 }
