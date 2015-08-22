@@ -88,9 +88,31 @@
 
 - (void)savePressed:(id)sender
 {
-    if(self.successBlock)
+    if([_passwordUsernameTextField.text isEqualToString:@""] || [_passwordTitleTextField.text isEqualToString:@""] || [_passwordLinkTextField.text isEqualToString:@""] || [_passwordCodeTextField.text isEqualToString:@""])
     {
-        self.successBlock();
+        
+    }
+    else
+    {
+        PasswordItem *item = [[PasswordItem alloc]init];
+        item.passwordTitle = _passwordTitleTextField.text;
+        item.passwordLink = _passwordLinkTextField.text;
+        item.userName = _passwordUsernameTextField.text;
+        item.encodedText = _passwordCodeTextField.text;
+        item.timestamp = (int64_t)[[NSDate date] timeIntervalSince1970];
+        
+        PasswordCache *cache = [[PasswordCache alloc]initWithData:[[CacheManager sharedInstance] getPasswordData] error:nil];
+        [cache.itemsArray insertObject:item atIndex:0];
+        [[CacheManager sharedInstance] savePasswordData:[cache data]];
+        
+        _passwordLinkTextField.text = @"";
+        _passwordTitleTextField.text = @"";
+        _passwordUsernameTextField.text = @"";
+        
+        if(self.successBlock)
+        {
+            self.successBlock();
+        }
     }
 }
 

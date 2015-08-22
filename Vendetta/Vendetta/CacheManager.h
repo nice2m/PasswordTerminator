@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Password.pbobjc.h"
 
 @interface CacheManager : NSObject
 
 @property(nonatomic,copy) NSString  *rootCachePath;
+
++ (CacheManager *)sharedInstance;
 
 - (BOOL)storeFileToCachepath:(NSString *)cacheFilePath
               andFileContent:(NSData *)content;

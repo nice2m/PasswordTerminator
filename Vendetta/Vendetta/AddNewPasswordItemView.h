@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "UIViewExt.h"
 #import "GlobalHeader.h"
+#import "Password.pbobjc.h"
+#import "CacheManager.h"
 
 @interface AddNewPasswordItemView : UIView
 

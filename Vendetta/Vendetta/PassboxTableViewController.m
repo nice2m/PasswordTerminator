@@ -45,6 +45,17 @@
         }];
         _isAddViewShown = NO;
     };
+    _addView.successBlock = ^(void){
+        [weakSelf.view endEditing:YES];
+        [UIView animateWithDuration:0.3 animations:^{
+            weakSelf.addView.frame = CGRectMake(weakSelf.addView.left, -100.0f, weakSelf.addView.width, weakSelf.addView.height);
+            weakSelf.addView.alpha = 0.0f;
+            weakSelf.blurBackgroundView.image = nil;
+            [weakSelf.view sendSubviewToBack:weakSelf.blurBackgroundView];
+        }];
+        _isAddViewShown = NO;
+        [weakSelf reloadPasswordData];
+    };
     [self.view addSubview:_addView];
     
     _blurBackgroundView = [[UIImageView alloc]initWithFrame:self.view.bounds];
@@ -65,6 +76,11 @@
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setTranslucent:YES];
     [self.navigationController.navigationBar lt_setBackgroundColor:GlobalNavGray];
+}
+
+- (void)reloadPasswordData
+{
+    
 }
 
 - (void)addNewPassword

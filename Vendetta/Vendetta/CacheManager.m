@@ -113,6 +113,16 @@
 
 - (NSData *)getPasswordData
 {
-    return [self getCacheWithFilepath:@"password"];
+    NSData *data = [self getCacheWithFilepath:@"password"];
+    if(data)
+    {
+        return data;
+    }
+    else
+    {
+        PasswordCache *cache = [[PasswordCache alloc]init];
+        cache.itemsArray = [NSMutableArray array];
+        return [cache data];
+    }
 }
 @end
