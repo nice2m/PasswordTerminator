@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlobalHeader.h"
+#import "UIViewExt.h"
 
 @interface PassboxItemTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UIView *seperatorView;
 @end

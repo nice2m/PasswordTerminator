@@ -10,6 +10,7 @@
 #import "UINavigationBar+Awesome.h"
 #import "AddNewPasswordItemView.h"
 #import "UIImage+ImageEffects.h"
+#import "PassboxItemTableViewCell.h"
 
 @interface PassboxTableViewController ()
 {
@@ -17,6 +18,8 @@
 }
 @property (nonatomic, strong) AddNewPasswordItemView *addView;
 @property (nonatomic, strong) UIImageView *blurBackgroundView;
+
+@property (nonatomic, strong) NSMutableArray *passwordItemsArray;
 @end
 
 @implementation PassboxTableViewController
@@ -26,6 +29,7 @@
     [self hideExtraCellLine];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.passwordItemsArray = [NSMutableArray array];
     
     UIBarButtonItem *add = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewPassword)];
     add.tintColor = [UIColor whiteColor];
@@ -61,6 +65,7 @@
     _blurBackgroundView = [[UIImageView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:_blurBackgroundView];
     [self.view sendSubviewToBack:_blurBackgroundView];
+    [self reloadPasswordData];
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -80,7 +85,9 @@
 
 - (void)reloadPasswordData
 {
-    
+    PasswordCache *cache = [[PasswordCache alloc]initWithData:[[CacheManager sharedInstance] getPasswordData] error:nil];
+    self.passwordItemsArray = cache.itemsArray;
+    [self.tableView reloadData];
 }
 
 - (void)addNewPassword
@@ -119,7 +126,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;
+    return self.passwordItemsArray.count;
 }
 
 - (void) hideExtraCellLine
@@ -131,10 +138,10 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fuck"];
+    PassboxItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"passwordItem"];
     if(!cell)
     {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"fuck"];
+        cell = [[PassboxItemTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"passwordItem"];
     }
     return cell;
 }
@@ -142,6 +149,11 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [self.view endEditing:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 170.0f;
 }
 /*
 // Override to support conditional editing of the table view.
