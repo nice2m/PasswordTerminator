@@ -139,10 +139,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PassboxItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"passwordItem"];
+    PasswordItem *item = [self.passwordItemsArray objectAtIndex:indexPath.row];
+    
     if(!cell)
     {
         cell = [[PassboxItemTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"passwordItem"];
     }
+    cell.item = item;
     return cell;
 }
 
