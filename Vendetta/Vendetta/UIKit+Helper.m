@@ -83,4 +83,40 @@
     return ceilf(size.height);
 }
 
++ (CGFloat) getTextHeightWithAttributedText:(NSAttributedString *)attributedString
+{
+    UITextView *tmp = [[UITextView alloc]init];
+    tmp.attributedText = attributedString;
+    [tmp sizeToFit];
+    return tmp.frame.size.height;
+}
+
+- (UIViewController *)getCurrentVC
+{
+    UIViewController *result = nil;
+    
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)
+        {
+            if (tmpWin.windowLevel == UIWindowLevelNormal)
+            {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    
+    return result;
+}
 @end

@@ -97,9 +97,10 @@
         self.addView.passwordCodeTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentCode"];
         [UIView animateWithDuration:0.3 animations:^{
             _blurBackgroundView.image = [[self.view convertViewToImage] applyBlurWithRadius:15.0f tintColor:[UIColor colorWithWhite:0.7f alpha:0.4f] saturationDeltaFactor:1.0f maskImage:nil];
+            _blurBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, ScreenHeight);
             [self.view bringSubviewToFront:_blurBackgroundView];
             [self.view bringSubviewToFront:_addView];
-            self.addView.frame = CGRectMake(self.addView.left, 30.0f, self.addView.width, self.addView.height);
+            self.addView.frame = CGRectMake(self.addView.left, 30.0f + self.tableView.contentOffset.y + 64.0f, self.addView.width, self.addView.height);
             self.addView.alpha = 1.0f;
         }];
         _isAddViewShown = YES;
@@ -156,7 +157,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 170.0f;
+    PasswordItem *item = [self.passwordItemsArray objectAtIndex:indexPath.row];
+    CGFloat height = 100.0f;
+    height += [UIKitHelper getTextHeightWithText:item.passwordTitle andMaxWidth:ScreenWidth - 30.0f andFont:[UIFont boldSystemFontOfSize:20.0f]];
+    height += [UIKitHelper getTextHeightWithText:[NSString stringWithFormat:@"密码链接地址 | %@",item.passwordLink] andMaxWidth:ScreenWidth - 30.0f andFont:[UIFont systemFontOfSize:14.0f]];
+    height += [UIKitHelper getTextHeightWithText:[NSString stringWithFormat:@"用户名 | %@",item.userName] andMaxWidth:ScreenWidth - 30.0f andFont:[UIFont systemFontOfSize:18.0f]];
+    return height;
 }
 /*
 // Override to support conditional editing of the table view.

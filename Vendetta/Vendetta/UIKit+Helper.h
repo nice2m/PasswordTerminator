@@ -10,6 +10,8 @@
 
 @interface UIKitHelper : UIViewController
 
++ (UIKitHelper*)sharedInstance;
+
 + (UIViewController*)viewControllerOfSuperView:(UIView *)subView;
 
 //根据颜色生成图片
@@ -23,4 +25,6 @@
 + (CGFloat) getTextHeightWithText:(NSString *) text
                       andMaxWidth:(CGFloat) maxWidth
                           andFont:(UIFont *) font;
+
+- (UIViewController *)getCurrentVC;
 @end
