@@ -41,6 +41,7 @@
     __weak PassboxTableViewController *weakSelf = self;
     _addView.cancelBlock = ^(void){
         [weakSelf.view endEditing:YES];
+        weakSelf.tableView.scrollEnabled = YES;
         [UIView animateWithDuration:0.3 animations:^{
             weakSelf.addView.frame = CGRectMake(weakSelf.addView.left, -100.0f, weakSelf.addView.width, weakSelf.addView.height);
             weakSelf.addView.alpha = 0.0f;
@@ -51,6 +52,7 @@
     };
     _addView.successBlock = ^(void){
         [weakSelf.view endEditing:YES];
+        weakSelf.tableView.scrollEnabled = YES;
         [UIView animateWithDuration:0.3 animations:^{
             weakSelf.addView.frame = CGRectMake(weakSelf.addView.left, -100.0f, weakSelf.addView.width, weakSelf.addView.height);
             weakSelf.addView.alpha = 0.0f;
@@ -95,9 +97,11 @@
     if(!_isAddViewShown)
     {
         self.addView.passwordCodeTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentCode"];
-        _blurBackgroundView.frame = CGRectMake(0.0f, self.tableView.contentOffset.y + 64.0f, ScreenWidth, ScreenHeight);
+        _blurBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, self.tableView.contentSize.height);
+        self.tableView.scrollEnabled = NO;
         [UIView animateWithDuration:0.3 animations:^{
-            _blurBackgroundView.image = [[self.view convertViewToImage] applyBlurWithRadius:15.0f tintColor:[UIColor colorWithWhite:0.7f alpha:0.4f] saturationDeltaFactor:1.0f maskImage:nil];
+            
+            _blurBackgroundView.backgroundColor = [UIColor colorWithWhite:0.7f alpha:0.9f];
             [self.view bringSubviewToFront:_blurBackgroundView];
             [self.view bringSubviewToFront:_addView];
             self.addView.frame = CGRectMake(self.addView.left, 30.0f + self.tableView.contentOffset.y + 64.0f, self.addView.width, self.addView.height);
@@ -108,6 +112,7 @@
     else
     {
         [self.view endEditing:YES];
+        self.tableView.scrollEnabled = YES;
         [UIView animateWithDuration:0.3 animations:^{
             self.addView.frame = CGRectMake(self.addView.left, -100.0f, self.addView.width, self.addView.height);
             self.addView.alpha = 0.0f;
