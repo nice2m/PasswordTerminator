@@ -95,9 +95,9 @@
     if(!_isAddViewShown)
     {
         self.addView.passwordCodeTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentCode"];
+        _blurBackgroundView.frame = CGRectMake(0.0f, self.tableView.contentOffset.y + 64.0f, ScreenWidth, ScreenHeight);
         [UIView animateWithDuration:0.3 animations:^{
             _blurBackgroundView.image = [[self.view convertViewToImage] applyBlurWithRadius:15.0f tintColor:[UIColor colorWithWhite:0.7f alpha:0.4f] saturationDeltaFactor:1.0f maskImage:nil];
-            _blurBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, ScreenHeight);
             [self.view bringSubviewToFront:_blurBackgroundView];
             [self.view bringSubviewToFront:_addView];
             self.addView.frame = CGRectMake(self.addView.left, 30.0f + self.tableView.contentOffset.y + 64.0f, self.addView.width, self.addView.height);
