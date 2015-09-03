@@ -37,4 +37,6 @@
 - (void)savePasswordData:(NSData *)content;
 
 - (NSData *)getPasswordData;
+
+- (BOOL)removeItemWithTimestamp:(id)timestamp;
 @end

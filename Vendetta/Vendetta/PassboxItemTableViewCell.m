@@ -33,8 +33,8 @@
     
     _seperatorView.frame = CGRectMake(0.0f, self.height - 20.0f, ScreenWidth, 20.0f);
     
-    CGFloat titleHeight = [UIKitHelper getTextHeightWithText:_item.passwordTitle andMaxWidth:self.width - 30.0f andFont:[UIFont boldSystemFontOfSize:20.0f]];
-    _passwordTitleLabel.frame = CGRectMake(15.0f, 15.0f, self.width - 30.0f, titleHeight);
+    CGFloat titleHeight = [UIKitHelper getTextHeightWithText:_item.passwordTitle andMaxWidth:self.width - 62.0f andFont:[UIFont boldSystemFontOfSize:20.0f]];
+    _passwordTitleLabel.frame = CGRectMake(15.0f, 15.0f, self.width - 62.0f, titleHeight);
     _passwordCodeLabel.frame = CGRectMake(15.0f, _passwordTitleLabel.bottom + 10.0f, self.width - 30.0f, 23.0f);
     
     CGFloat linkHeight = [UIKitHelper getTextHeightWithText:[NSString stringWithFormat:@"密码链接地址 | %@",_item.passwordLink] andMaxWidth:self.width - 30.0f andFont:[UIFont systemFontOfSize:14.0f]];
@@ -47,6 +47,8 @@
     _passwordLinkTextView.text = [NSString stringWithFormat:@"密码链接地址 | %@",_item.passwordLink];
     _passwordUsernameTextView.attributedText = usernameStr;
     _passwordCodeLabel.attributedText = encodedStr;
+    
+    _deleteBtn.frame = CGRectMake(ScreenWidth - 47.0f, 15.0f, 32.0f, 32.0f);
 }
 
 - (void)initSubViews
@@ -76,6 +78,21 @@
     _passwordCodeLabel.font = [UIFont systemFontOfSize:20.0f];
     _passwordCodeLabel.textColor = GlobalNavGray;
     [self.contentView addSubview:_passwordCodeLabel];
+    
+    self.deleteBtn = [[UIButton alloc]initWithFrame:CGRectZero];
+    [_deleteBtn setTitle:@"✗" forState:UIControlStateNormal];
+    [_deleteBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    _deleteBtn.titleLabel.font = [UIFont systemFontOfSize:17.0f];
+    [_deleteBtn addTarget:self action:@selector(deleteItem) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView addSubview:_deleteBtn];
+}
+
+- (void)deleteItem
+{
+    if(self.deleteBlock)
+    {
+        self.deleteBlock(@(self.item.timestamp));
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

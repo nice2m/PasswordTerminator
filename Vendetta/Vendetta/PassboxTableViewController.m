@@ -11,6 +11,7 @@
 #import "AddNewPasswordItemView.h"
 #import "UIImage+ImageEffects.h"
 #import "PassboxItemTableViewCell.h"
+#import "CacheManager.h"
 
 @interface PassboxTableViewController ()
 {
@@ -42,6 +43,7 @@
     _addView.cancelBlock = ^(void){
         [weakSelf.view endEditing:YES];
         weakSelf.tableView.scrollEnabled = YES;
+        weakSelf.blurBackgroundView.frame = CGRectZero;
         [UIView animateWithDuration:0.3 animations:^{
             weakSelf.addView.frame = CGRectMake(weakSelf.addView.left, -100.0f, weakSelf.addView.width, weakSelf.addView.height);
             weakSelf.addView.alpha = 0.0f;
@@ -53,6 +55,7 @@
     _addView.successBlock = ^(void){
         [weakSelf.view endEditing:YES];
         weakSelf.tableView.scrollEnabled = YES;
+        weakSelf.blurBackgroundView.frame = CGRectZero;
         [UIView animateWithDuration:0.3 animations:^{
             weakSelf.addView.frame = CGRectMake(weakSelf.addView.left, -100.0f, weakSelf.addView.width, weakSelf.addView.height);
             weakSelf.addView.alpha = 0.0f;
@@ -64,7 +67,7 @@
     };
     [self.view addSubview:_addView];
     
-    _blurBackgroundView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    _blurBackgroundView = [[UIImageView alloc]initWithFrame:self.view.frame];
     [self.view addSubview:_blurBackgroundView];
     [self.view sendSubviewToBack:_blurBackgroundView];
     [self reloadPasswordData];
@@ -97,8 +100,8 @@
     if(!_isAddViewShown)
     {
         self.addView.passwordCodeTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentCode"];
-        _blurBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, self.tableView.contentSize.height);
-        self.tableView.scrollEnabled = NO;
+        _blurBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, self.tableView.contentSize.height > ScreenHeight ? self.tableView.contentSize.height : ScreenHeight);
+        self.tableView.scrollEnabled = YES;
         [UIView animateWithDuration:0.3 animations:^{
             
             _blurBackgroundView.backgroundColor = [UIColor colorWithWhite:0.7f alpha:0.9f];
@@ -113,6 +116,7 @@
     {
         [self.view endEditing:YES];
         self.tableView.scrollEnabled = YES;
+        _blurBackgroundView.frame = CGRectZero;
         [UIView animateWithDuration:0.3 animations:^{
             self.addView.frame = CGRectMake(self.addView.left, -100.0f, self.addView.width, self.addView.height);
             self.addView.alpha = 0.0f;
@@ -150,12 +154,18 @@
     if(!cell)
     {
         cell = [[PassboxItemTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"passwordItem"];
+        
+        __weak PassboxTableViewController *weakSelf = self;
+        cell.deleteBlock = ^(id itemTimestamp){
+            [[CacheManager sharedInstance] removeItemWithTimestamp:itemTimestamp];
+            [weakSelf reloadPasswordData];
+        };
     }
     cell.item = item;
     return cell;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.view endEditing:YES];
 }
@@ -164,19 +174,16 @@
 {
     PasswordItem *item = [self.passwordItemsArray objectAtIndex:indexPath.row];
     CGFloat height = 100.0f;
-    height += [UIKitHelper getTextHeightWithText:item.passwordTitle andMaxWidth:ScreenWidth - 30.0f andFont:[UIFont boldSystemFontOfSize:20.0f]];
+    height += [UIKitHelper getTextHeightWithText:item.passwordTitle andMaxWidth:ScreenWidth - 62.0f andFont:[UIFont boldSystemFontOfSize:20.0f]];
     height += [UIKitHelper getTextHeightWithText:[NSString stringWithFormat:@"密码链接地址 | %@",item.passwordLink] andMaxWidth:ScreenWidth - 30.0f andFont:[UIFont systemFontOfSize:14.0f]];
     height += [UIKitHelper getTextHeightWithText:[NSString stringWithFormat:@"用户名 | %@",item.userName] andMaxWidth:ScreenWidth - 30.0f andFont:[UIFont systemFontOfSize:18.0f]];
     return height;
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
+//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return UITableViewCellEditingStyleDelete;
+//}
 /*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

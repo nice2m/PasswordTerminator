@@ -22,4 +22,6 @@
 @property (nonatomic, strong) UILabel *passwordUsernameTextView;
 @property (nonatomic, strong) UILabel *passwordCodeLabel;
 
+@property (nonatomic, strong) UIButton *deleteBtn;
+@property (nonatomic, copy) void (^deleteBlock)(id itemTimestamp);
 @end

@@ -125,4 +125,26 @@
         return [cache data];
     }
 }
+
+- (BOOL)removeItemWithTimestamp:(id)timestamp
+{
+    BOOL flag = NO;
+    PasswordCache *cache = [[PasswordCache alloc]initWithData:[self getPasswordData] error:nil];
+    NSMutableArray *itemArray = cache.itemsArray;
+    
+    for(PasswordItem *item in itemArray)
+    {
+        if(item.timestamp == [timestamp longLongValue])
+        {
+            [itemArray removeObject:item];
+            flag = YES;
+        }
+    }
+    PasswordCache *cacheToCache = [[PasswordCache alloc]init];
+    cacheToCache.itemsArray = itemArray;
+    
+    [self savePasswordData:[cacheToCache data]];
+    return flag;
+}
+
 @end
