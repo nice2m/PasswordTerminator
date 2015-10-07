@@ -101,7 +101,7 @@
     {
         self.addView.passwordCodeTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentCode"];
         _blurBackgroundView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, self.tableView.contentSize.height > ScreenHeight ? self.tableView.contentSize.height : ScreenHeight);
-        self.tableView.scrollEnabled = YES;
+        self.tableView.scrollEnabled = NO;
         [UIView animateWithDuration:0.3 animations:^{
             
             _blurBackgroundView.backgroundColor = [UIColor colorWithWhite:0.7f alpha:0.9f];

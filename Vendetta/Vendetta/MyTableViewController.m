@@ -38,11 +38,21 @@
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
     self.seconds = 0;
+    
+    UIBarButtonItem *about = [[UIBarButtonItem alloc]initWithTitle:@"关于" style:UIBarButtonItemStylePlain target:self action:@selector(about:)];
+    about.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = about;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)about:(id)sender
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {
