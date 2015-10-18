@@ -32,6 +32,8 @@
         self.passwordTitleLabel = [self labelForFrame:CGRectMake(ADD_VIEW_GLOBAL_LEFT_PADDING, 15.0f, 75.0f, itemHeight) withTitle:@"密码项标题"];
         [self addSubview:_passwordTitleLabel];
         self.passwordTitleTextField = [self textFieldForFrame:CGRectMake(_passwordTitleLabel.right + 30.0f, _passwordTitleLabel.top, self.width - _passwordTitleLabel.right - 30.0f - ADD_VIEW_GLOBAL_LEFT_PADDING, itemHeight) withPlaceHolder:@"输入标题，例如“Github”"];
+        [_passwordTitleTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [_passwordTitleTextField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
         [self addSubview:_passwordTitleTextField];
         
         [self addSubview:[self seperatorViewForFrame:CGRectMake(ADD_VIEW_GLOBAL_LEFT_PADDING, _passwordTitleLabel.bottom, self.width - ADD_VIEW_GLOBAL_LEFT_PADDING * 2, 0.5f)]];
@@ -39,6 +41,9 @@
         self.passwordLinkLabel = [self labelForFrame:CGRectMake(ADD_VIEW_GLOBAL_LEFT_PADDING, _passwordTitleLabel.bottom, 75.0f, itemHeight) withTitle:@"密码项链接"];
         [self addSubview:_passwordLinkLabel];
         self.passwordLinkTextField = [self textFieldForFrame:CGRectMake(_passwordLinkLabel.right + 30.0f, _passwordLinkLabel.top, self.width - _passwordLinkLabel.right - 30.0f - ADD_VIEW_GLOBAL_LEFT_PADDING, itemHeight) withPlaceHolder:@"输入Url，例如“www.github.com”"];
+        [_passwordLinkTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [_passwordLinkTextField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+        
         [self addSubview:_passwordLinkTextField];
         
         [self addSubview:[self seperatorViewForFrame:CGRectMake(ADD_VIEW_GLOBAL_LEFT_PADDING, _passwordTitleLabel.bottom, self.width - ADD_VIEW_GLOBAL_LEFT_PADDING * 2, 0.5f)]];
@@ -46,6 +51,8 @@
         self.passwordUsernameLabel = [self labelForFrame:CGRectMake(ADD_VIEW_GLOBAL_LEFT_PADDING, _passwordLinkLabel.bottom, 75.0f, itemHeight) withTitle:@"使用用户名"];
         [self addSubview:_passwordUsernameLabel];
         self.passwordUsernameTextField = [self textFieldForFrame:CGRectMake(_passwordUsernameLabel.right + 30.0f, _passwordUsernameLabel.top, self.width - _passwordUsernameLabel.right - 30.0f - ADD_VIEW_GLOBAL_LEFT_PADDING, itemHeight) withPlaceHolder:@"输入用户名，例如“Vendetta”"];
+        [_passwordUsernameTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [_passwordUsernameTextField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
         [self addSubview:_passwordUsernameTextField];
         
         [self addSubview:[self seperatorViewForFrame:CGRectMake(ADD_VIEW_GLOBAL_LEFT_PADDING, _passwordLinkLabel.bottom, self.width - ADD_VIEW_GLOBAL_LEFT_PADDING * 2, 0.5f)]];
