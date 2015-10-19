@@ -52,7 +52,7 @@
 
 - (void)about:(id)sender
 {
-    
+    [self performSegueWithIdentifier:@"AboutSegue" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {
