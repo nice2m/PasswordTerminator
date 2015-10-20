@@ -94,6 +94,11 @@
     }
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self endEditing:YES];
+}
+
 - (void)savePressed:(id)sender
 {
     if([_passwordUsernameTextField.text isEqualToString:@""] || [_passwordTitleTextField.text isEqualToString:@""] || [_passwordLinkTextField.text isEqualToString:@""] || [_passwordCodeTextField.text isEqualToString:@""])

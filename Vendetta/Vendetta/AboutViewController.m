@@ -36,15 +36,6 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
-- (CGFloat)getTextHeight:(UITextView *)textView
-{
-    UITextView *tmp_textView = [[UITextView alloc]initWithFrame:textView.frame];
-    tmp_textView.font = textView.font;
-    tmp_textView.text = textView.text;
-    [tmp_textView sizeToFit];
-    return tmp_textView.height;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
