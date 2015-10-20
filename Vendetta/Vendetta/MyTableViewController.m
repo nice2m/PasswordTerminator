@@ -39,7 +39,7 @@
     
     self.seconds = 0;
     
-    UIBarButtonItem *about = [[UIBarButtonItem alloc]initWithTitle:@"关于" style:UIBarButtonItemStylePlain target:self action:@selector(about:)];
+    UIBarButtonItem *about = [[UIBarButtonItem alloc]initWithTitle:@"看看" style:UIBarButtonItemStylePlain target:self action:@selector(about:)];
     about.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem = about;
     

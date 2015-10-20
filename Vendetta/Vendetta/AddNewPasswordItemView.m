@@ -42,6 +42,7 @@
         [self addSubview:_passwordLinkLabel];
         self.passwordLinkTextField = [self textFieldForFrame:CGRectMake(_passwordLinkLabel.right + 30.0f, _passwordLinkLabel.top, self.width - _passwordLinkLabel.right - 30.0f - ADD_VIEW_GLOBAL_LEFT_PADDING, itemHeight) withPlaceHolder:@"输入Url，例如“www.github.com”"];
         [_passwordLinkTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+        [_passwordLinkTextField setKeyboardType:UIKeyboardTypeURL];
         [_passwordLinkTextField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
         
         [self addSubview:_passwordLinkTextField];

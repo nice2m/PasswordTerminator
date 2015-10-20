@@ -23,10 +23,10 @@
     self.BackBtn.layer.masksToBounds = YES;
     self.MainView.frame = CGRectMake(0.0f, 0.0f,ScreenWidth , ScreenHeight);
     [self.ContentTextView sizeToFit];
+    [self.LinkLabel addTarget:self action:@selector(jump) forControlEvents:UIControlEventTouchUpInside];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(jump)];
-    [self.LinkLabel addGestureRecognizer:tap];
-    [self.LinkLabel sizeToFit];
+    self.LinkLabel.titleLabel.numberOfLines = 0;
+    [self.LinkLabel.titleLabel sizeToFit];
     // Do any additional setup after loading the view.
 }
 
