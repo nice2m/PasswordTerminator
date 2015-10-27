@@ -128,7 +128,7 @@ Cg
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content">密码终结者来自一个操蛋的想法，我们平时可能有很多很多的没什么卵用的账号，然而我们懒得去想这些账号的密码，因此我们在分配密码的时候总会遵循一定规律，这也是黑客摧毁我们的最佳途径。当然，你也可以用一些其他的付费的密码管理软件，但是操蛋的是，我并不相信他们拿到我的信息会完全安全。因此我决定自己快速的撸一个类似的东西出来，并且每次可以给我提供一个让破解者蛋碎的随机密码。</string>
+                                                <string key="content">密码终结者来自一个奇妙的想法，我们平时可能有很多很多的没什么用的账号，然而我们懒得去想这些账号的密码，因此我们在分配密码的时候总会遵循一定规律，这也是黑客摧毁我们的最佳途径。当然，你也可以用一些其他的付费的密码管理软件，但是，我并不相信他们拿到我的信息会完全安全。因此我决定自己快速的实现一个类似的东西出来，并且每次可以给我提供一个让破解者毫无办法破解的随机密码。</string>
                                                 <attributes>
                                                     <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <font key="NSFont" size="16" name="STHeitiSC-Light"/>
@@ -185,22 +185,6 @@ Cg
 Cg
 </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="千万不要相信什么大公司，什么付费软件就能够保证你的安全，只有完全透明的东西才是最安全的。爱信不信">
-                                                <attributes>
-                                                    <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="16" name="STHeitiSC-Light"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content">……
-</string>
-                                                <attributes>
                                                     <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <font key="NSFont" size="16" name="HelveticaNeue"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -236,7 +220,7 @@ Cg
                                             <fragment>
                                                 <string key="content">怎么使用？
 选择你需要的密码类型，点击手动刷新，或者等待30秒自动刷新，然后在密码箱点击添加，刚生成的这个密码就会出现在窗口里，你只要将其他信息补全一下就可以了。
-这个应用我之所以没有做进一步的加密，是因为在现实生活中，我们大部分的账号都是一次性的，或者使用频率极低的，如果是很重要的密码，不论是什么密码管理软件都不建议使用，例如支付密码等等。因此密码终结者的初衷就是留给大量并不重要的账号，为他们生成唯一的随机密码，你也许会担心手机被盗之类的事情，我也许会使用指纹解锁，但肯定不会再去用密码来管理密码，这本身是个愚蠢的作法……</string>
+这个应用我之所以没有做进一步的加密，是因为在现实生活中，我们大部分的账号都是一次性的，或者使用频率极低的，如果是很重要的密码，不论是什么密码管理软件都不建议使用，例如支付密码等等。因此密码终结者的初衷就是留给大量并不重要的账号，为他们生成唯一的随机密码，你也许会担心手机被盗之类的事情，我也许会使用指纹解锁，但肯定不会再去用密码来管理密码……</string>
                                                 <attributes>
                                                     <font key="NSFont" size="16" name="STHeitiSC-Medium"/>
                                                     <real key="NSKern" value="0.0"/>
@@ -384,7 +368,7 @@ Cg
                     <navigationItem key="navigationItem" id="bx5-dG-eki">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="bDV-vs-2El">
-                            <rect key="frame" x="76" y="6" width="168" height="33"/>
+                            <rect key="frame" x="76" y="5.5" width="168" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOm-W8-JN7">
