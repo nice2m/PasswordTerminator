@@ -68,7 +68,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Da9-zY-5vG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="Terminate my fucking passwords">
+                                        <state key="normal" title="Terminate my passwords">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
