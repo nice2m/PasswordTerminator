@@ -3,6 +3,8 @@
 ## Version
 V1.0
 
+[![image](https://raw.githubusercontent.com/SergioChan/PasswordTerminator/master/Image/badgeApple.png)](https://itunes.apple.com/us/app/passinator-mi-ma-zhong-jie-zhe/id1050848368?mt=8)
+
 ## What is Passinator
 
 密码终结者来自一个操蛋的想法，我们平时可能有很多很多的没什么卵用的账号，然而我们懒得去想这些账号的密码，因此我们在分配密码的时候总会遵循一定规律，这也是黑客摧毁我们的最佳途径。当然，你也可以用一些其他的付费的密码管理软件，但是操蛋的是，我并不相信他们拿到我的信息会完全安全。因此我决定自己快速的撸一个类似的东西出来，并且每次可以给我提供一个让破解者蛋碎的随机密码。
