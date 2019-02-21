@@ -7,6 +7,7 @@
 //
 
 #import "CacheManager.h"
+#import "CacheManager+Patch.h"
 
 @implementation CacheManager
 
@@ -29,7 +30,12 @@
 
 - (void)initRootCachePath
 {
-    self.rootCachePath=[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+//    self.rootCachePath=[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+}
+- (void)extraConfig
+{
+    [self nt_bugFix_for_build_3];
+
 }
 
 - (BOOL)storeFileToCachepath:(NSString *)cacheFilePath andFileContent:(NSData *)content
@@ -113,6 +119,8 @@
 
 - (NSData *)getPasswordData
 {
+    [self extraConfig];
+
     NSData *data = [self getCacheWithFilepath:@"password"];
     if(data)
     {
