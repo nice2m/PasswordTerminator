@@ -146,6 +146,7 @@
         {
             [itemArray removeObject:item];
             flag = YES;
+            break;
         }
     }
     PasswordCache *cacheToCache = [[PasswordCache alloc]init];
